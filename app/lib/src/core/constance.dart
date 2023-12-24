@@ -1,4 +1,4 @@
-abstract class Constance{
+abstract class Constance {
   static bool isLight = true;
   static const String appName = "E-commerce App";
   static const double globalRadius = 12;
@@ -12,3 +12,20 @@ abstract class Constance{
   static const double promoCardHight = 80;
 }
 
+enum ColorType {
+  text,
+  gray,
+  primary,
+  background,
+  white,
+  error,
+  success,
+  saleHot,
+  card,
+}
+
+enum ThemeModeType {
+  system,
+  dark,
+  light,
+}
