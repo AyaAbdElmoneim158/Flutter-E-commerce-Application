@@ -136,6 +136,10 @@ class AppTheme {
       textTheme: _buildTextTheme(base.textTheme),
       primaryTextTheme: _buildTextTheme(base.textTheme),
       platform: TargetPlatform.iOS,
+      // navigationBarTheme: NavigationBarThemeData(
+      //   backgroundColor:
+      //       AppTheme.getColor(ColorType.success, Constance.isLight),
+      // )
       // visualDensity: VisualDensity.adaptivePlatformDensity, colorScheme: ColorScheme(background: isLight ? const Color(0xFFFFFFFF) : const Color(0xFF2C2C2C)),
     );
   }

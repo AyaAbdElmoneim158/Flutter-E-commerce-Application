@@ -5,6 +5,7 @@ import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 
 class CommonCatalogHProductCard extends StatelessWidget {
@@ -13,7 +14,7 @@ class CommonCatalogHProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      height: double.minPositive,
+      height: Constance.cardHight,
       childClip: const CommonCircleBtn(
         icon: Icons.favorite_outline,
         isBig: false,
