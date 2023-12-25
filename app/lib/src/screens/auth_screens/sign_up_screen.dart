@@ -11,21 +11,26 @@ import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
 
     return Scaffold(
-        appBar: const CustomAppBar(style: 2, headline: AppStrings.login),
+        appBar: const CustomAppBar(style: 2, headline: "Sign up"),
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(Constance.globalPadding),
             child: Column(
               children: [
                 Styles().hSizeBox(SizeConfig.screenHeight! * 0.064),
+                const CommonTextField(
+                  labelText: AppStrings.nameField,
+                  hintText: AppStrings.nameField,
+                ),
+                Styles().hSizeBox(SizeConfig.screenHeight! * 0.012),
                 const CommonTextField(
                   labelText: AppStrings.emailField,
                   hintText: AppStrings.emailField,
@@ -40,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      AppStrings.forgetPassword,
+                      AppStrings.haveAccount,
                       style: Styles().getText14pxTextStyle(
                         color: AppTheme.getColor(
                           ColorType.text,
@@ -59,10 +64,10 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
                 Styles().hSizeBox(SizeConfig.screenHeight! * 0.064),
-                CommonPrimaryBtn(btnText: AppStrings.login.toUpperCase()),
+                CommonPrimaryBtn(btnText: AppStrings.signUp.toUpperCase()),
                 Styles().hSizeBox(SizeConfig.screenHeight! * 0.164),
                 Text(
-                  AppStrings.loginWithSocial,
+                  AppStrings.signUpWithSocial,
                   style: Styles().getText14pxTextStyle(
                     color: AppTheme.getColor(
                       ColorType.text,

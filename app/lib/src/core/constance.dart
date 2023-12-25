@@ -1,7 +1,7 @@
 import 'package:app/src/core/utils/size_config.dart';
 
 abstract class Constance {
-  static bool isLight = true;
+  static bool isLight = false;
   static const String appName = "E-commerce App";
   static const double globalRadius = 12;
   static const double textFieldBorderRadius = 8;
