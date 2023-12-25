@@ -19,4 +19,10 @@ abstract class AppStrings {
   static const String validEmail =
       "Not a valid email address. Should be your@email.com";
   static const String send = "SEND";
+
+  static const String homeLabel = "Home";
+  static const String shopLabel = "Shop";
+  static const String bagLabel = "Bag";
+  static const String favoritesLabel = "Favorites";
+  static const String profileLabel = "Profile";
 }
