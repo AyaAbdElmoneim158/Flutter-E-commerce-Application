@@ -1,6 +1,7 @@
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/app_strings.dart';
+import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
@@ -96,6 +97,8 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+   SizeConfig().init(context);
+   
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: AppTheme.getColor(

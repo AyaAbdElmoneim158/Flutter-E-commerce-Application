@@ -25,4 +25,9 @@ abstract class AppStrings {
   static const String bagLabel = "Bag";
   static const String favoritesLabel = "Favorites";
   static const String profileLabel = "Profile";
+
+  static const String myProfile = "My profile";
+  static const String profileUserName = "Matilda Brown";
+  static const String profileUserEmail = "matildabrown@mail.com";
+
 }

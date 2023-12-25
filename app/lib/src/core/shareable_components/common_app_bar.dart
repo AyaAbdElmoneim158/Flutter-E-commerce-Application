@@ -9,9 +9,13 @@ class CommonAppBar extends StatelessWidget {
     super.key,
     this.style = 1,
     required this.headline,
+    this.hasLeading = true,
+    this.action,
   });
   final int style;
   final String headline;
+  final bool hasLeading;
+  final List<Widget>? action;
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +29,17 @@ class CommonAppBar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(
-                  Icons.arrow_back_ios,
-                  size: SizeConfig.screenHeight! * 0.024,
-                  color: AppTheme.getColor(ColorType.text, Constance.isLight),
+              if (hasLeading)
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: 24,
+                    color: AppTheme.getColor(ColorType.text, Constance.isLight),
+                  ),
                 ),
-              ),
               (style == 3)
                   ? Text(
                       headline,
@@ -43,7 +48,15 @@ class CommonAppBar extends StatelessWidget {
                               ColorType.text, Constance.isLight)),
                     )
                   : const SizedBox(),
-              const SizedBox(),
+              (action == null)
+                  ? const SizedBox()
+                  : SizedBox(
+                      height: 150,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: action!,
+                      ),
+                    )
             ],
           ),
           (style == 2)

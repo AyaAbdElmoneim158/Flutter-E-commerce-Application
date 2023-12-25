@@ -7,6 +7,8 @@ abstract class ImageAssets {
   static const String darkSearchIcon = '$iconPath/dark-search-icon.svg';
 
   static const String mainImage = '$imagePath/main.png';
+  static const String profileImage = '$imagePath/profile-image.png';
+
 
   static const String googleIcon = '$iconPath/google_icon.svg';
   static const String facebookIcon = '$iconPath/facebook-icon.svg';
