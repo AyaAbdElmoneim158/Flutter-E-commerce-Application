@@ -9,5 +9,5 @@ abstract class ImageAssets {
   static const String mainImage = '$imagePath/main.png';
 
   static const String googleIcon = '$iconPath/google_icon.svg';
-  static const String facebookIcon = '$iconPath/facebook_icon.svg';
+  static const String facebookIcon = '$iconPath/facebook-icon.svg';
 }

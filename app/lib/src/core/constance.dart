@@ -7,7 +7,7 @@ abstract class Constance {
   static const double textFieldBorderRadius = 8;
 
   static const double globalSizeBox = 8;
-  static const double globalPadding = Constance.globalSizeBox * 2;
+  static double globalPadding = SizeConfig.screenHeight! * 0.016;
   static double aspectRatio = 16 / 9;
 
   static double cardHight = SizeConfig.screenHeight! * 0.104; //104

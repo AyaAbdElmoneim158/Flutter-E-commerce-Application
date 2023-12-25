@@ -1,5 +1,6 @@
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
+import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,9 @@ class CommonAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: (style == 1) ? 80 : 140,
+      height: (style == 1)
+          ? SizeConfig.screenHeight! * 0.080
+          : SizeConfig.screenHeight! * 0.140,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,7 +31,7 @@ class CommonAppBar extends StatelessWidget {
                 },
                 icon: Icon(
                   Icons.arrow_back_ios,
-                  size: 24,
+                  size: SizeConfig.screenHeight! * 0.024,
                   color: AppTheme.getColor(ColorType.text, Constance.isLight),
                 ),
               ),

@@ -23,19 +23,22 @@ class CommonPrimaryBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig ().init(context);
-    
+    SizeConfig().init(context);
+
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: isBig ? 48 : 36,
+        height: isBig
+            ? SizeConfig.screenHeight! * 0.048
+            : SizeConfig.screenHeight! * 0.036,
         width: (width != null)
             ? width
             : isBig
-                ? SizeConfig.screenWidth! * 0.85 : SizeConfig.screenWidth! * 0.3,
+                ? SizeConfig.screenWidth! * 0.85
+                : SizeConfig.screenWidth! * 0.3,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(SizeConfig.screenHeight! * 0.025),
           color: AppTheme.getColor(ColorType.primary, Constance.isLight),
           boxShadow: [Styles().getPrimaryBtnBoxShadow()],
         ),
@@ -46,7 +49,8 @@ class CommonPrimaryBtn extends StatelessWidget {
           children: [
             if (hasIcon)
               Padding(
-                padding: const EdgeInsets.only(right: 8),
+                padding:
+                    EdgeInsets.only(right: SizeConfig.screenHeight! * 0.08),
                 child: Icon(icon, color: AppColors.darkWhiteColor),
               ),
             Text(

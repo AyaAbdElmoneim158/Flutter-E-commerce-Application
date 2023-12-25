@@ -1,4 +1,5 @@
 import 'package:app/src/core/utils/app_colors.dart';
+import 'package:app/src/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -9,8 +10,8 @@ class CommonSocialBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 64,
-      width: 92,
+      height: SizeConfig.screenHeight! * 0.064,
+      width: SizeConfig.screenHeight! * 0.092,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
