@@ -1,3 +1,5 @@
+import 'package:app/src/core/utils/size_config.dart';
+
 abstract class Constance {
   static bool isLight = true;
   static const String appName = "E-commerce App";
@@ -8,8 +10,8 @@ abstract class Constance {
   static const double globalPadding = Constance.globalSizeBox * 2;
   static double aspectRatio = 16 / 9;
 
-  static const double cardHight = 124; //104
-  static const double promoCardHight = 80;
+  static double cardHight = SizeConfig.screenHeight! * 0.104; //104
+  static double promoCardHight = SizeConfig.screenHeight! * 0.080;
 }
 
 enum ColorType {

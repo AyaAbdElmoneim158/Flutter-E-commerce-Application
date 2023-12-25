@@ -14,7 +14,7 @@ class PromoImage extends StatelessWidget {
       flex: 3,
       child: Container(
         alignment: Alignment.center,
-        height: Constance.promoCardHight,
+        height: Constance.promoCardHight * 1.6,
         clipBehavior: Clip.none,
         decoration: BoxDecoration(
           color: AppTheme.getColor(ColorType.primary, Constance.isLight),

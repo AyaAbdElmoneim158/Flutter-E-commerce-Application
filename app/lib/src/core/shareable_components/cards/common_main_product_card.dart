@@ -12,7 +12,8 @@ class CommonMainProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      height: 280,
+      isVertical: true,
+      // height: 280,
       width: 162,
       child: Column(
         children: [

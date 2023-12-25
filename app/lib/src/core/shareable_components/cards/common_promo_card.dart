@@ -4,17 +4,19 @@ import 'package:app/src/core/shareable_components/cards/promo_image.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
+import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:app/src/core/utils/media_query_values.dart';
 
 class CommonPromoCard extends StatelessWidget {
   const CommonPromoCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return BaseCard(
-      height: Constance.promoCardHight,
+      // height: Constance.promoCardHight,
       child: Row(
         children: [
           const PromoImage(
@@ -70,7 +72,7 @@ class CommonPromoCard extends StatelessWidget {
                 ),
                 Styles().hSizeBox(4),
                 CommonPrimaryBtn(
-                  width: context.width * 0.3,
+                  width: SizeConfig.screenWidth! * 0.3,
                   btnText: 'Apply',
                   isBig: false,
                 ),

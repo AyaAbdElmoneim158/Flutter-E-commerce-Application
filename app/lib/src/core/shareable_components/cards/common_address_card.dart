@@ -11,7 +11,6 @@ class CommonAddressCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      height: 140,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(

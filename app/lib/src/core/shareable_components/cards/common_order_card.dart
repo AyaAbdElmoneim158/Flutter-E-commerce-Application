@@ -12,7 +12,7 @@ class CommonOrderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      height: 165,
+      // height: 165,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(

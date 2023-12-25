@@ -10,7 +10,7 @@ class CommonPopUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-        height: 96,
+        // height: 96,
         width: 170,
         opacity: 0.14,
         child: Column(

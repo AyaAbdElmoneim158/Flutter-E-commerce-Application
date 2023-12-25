@@ -42,7 +42,7 @@ class CardImageV extends StatelessWidget {
             Image.asset(
               imagePath,
               fit: BoxFit.cover,
-              height: 280,
+              height: Constance.cardHight * 1.6,
               width: double.infinity,
             ),
             if (isTagged)

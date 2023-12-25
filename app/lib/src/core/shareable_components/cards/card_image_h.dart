@@ -1,5 +1,5 @@
-import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/shareable_components/form/common_label.dart';
+import 'package:app/src/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class CardImageH extends StatelessWidget {
@@ -37,8 +37,9 @@ class CardImageH extends StatelessWidget {
             Image.asset(
               imagePath,
               fit: BoxFit.cover,
-              height: Constance.cardHight,
-              width: double.infinity,
+              // height: 300,
+              // Constance.cardHight * 1.6,
+              width: SizeConfig.screenWidth,
             ),
             if (isTagged)
               Positioned(

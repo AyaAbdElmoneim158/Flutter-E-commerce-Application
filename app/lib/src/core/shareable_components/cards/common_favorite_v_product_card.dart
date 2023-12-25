@@ -16,7 +16,7 @@ class CommonFavoriteVProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      height: 280,
+      // height: 280,
       width: 162,
       childClip: const CommonCircleBtn(
         icon: Icons.shopping_bag,

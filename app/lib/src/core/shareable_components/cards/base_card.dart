@@ -8,21 +8,21 @@ class BaseCard extends StatelessWidget {
     super.key,
     required this.child,
     this.childClip = const SizedBox(),
-    this.height = Constance.cardHight,
     this.width,
     this.opacity = 0.08,
+    this.isVertical = false,
   });
   final Widget child;
   final Widget childClip;
-  final double height;
   final double? width;
   final double opacity;
+  final bool isVertical;
 
   @override
   Widget build(BuildContext context) {
     return Stack(clipBehavior: Clip.none, children: [
       Container(
-        height: height,
+        height: isVertical ? Constance.cardHight * 2.3 : Constance.cardHight,
         width: width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
