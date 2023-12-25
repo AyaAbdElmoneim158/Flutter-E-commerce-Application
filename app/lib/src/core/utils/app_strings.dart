@@ -4,6 +4,7 @@ abstract class AppStrings {
 
   static const String signUp = "Sign up";
   static const String login = "Login";
+  static const String forget = "Forgot password";
 
   static const String nameField = "Name";
   static const String emailField = "Email";
@@ -12,4 +13,10 @@ abstract class AppStrings {
   static const String signUpWithSocial = "Or sign up with social account";
   static const String loginWithSocial = "Or login with social account";
   static const String forgetPassword = "Forgot your password?";
+
+  static const String enterEmail =
+      "Please, enter your email address. You will receive a link to create a new password via email";
+  static const String validEmail =
+      "Not a valid email address. Should be your@email.com";
+  static const String send = "SEND";
 }
