@@ -4,12 +4,17 @@ import 'package:app/src/core/shareable_components/cards/build_key_value_text.dar
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/model/order_model.dart';
 import 'package:flutter/material.dart';
 import 'package:app/src/core/utils/helper.dart';
+// import 'package:intl/intl.dart';
 
 class CommonOrderCard extends StatelessWidget {
-  const CommonOrderCard({super.key, this.checkBoxCallback});
+  const CommonOrderCard(
+      {super.key, this.checkBoxCallback, required this.order});
   final dynamic checkBoxCallback;
+  final Order order;
+
   @override
   Widget build(BuildContext context) {
     return BaseCard(
@@ -30,7 +35,7 @@ class CommonOrderCard extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "05-12-2019",
+                  "${order.deliveredAt}",
                   style: Styles().getText14pxTextStyle(
                     color: AppTheme.getColor(ColorType.gray, Constance.isLight),
                   ),
@@ -41,12 +46,15 @@ class CommonOrderCard extends StatelessWidget {
             Column(
               children: [
                 buildKeyValueText(
-                    key: "Tracking number: ", value: "IW3475453455"),
+                    key: "Tracking number", value: "IW3475453455"),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      buildKeyValueText(key: "Quantity: ", value: "3"),
-                      buildKeyValueText(key: "Total Amount: ", value: "112\$"),
+                      buildKeyValueText(
+                          key: "Quantity", value: "${order.cartItems.length}"),
+                      buildKeyValueText(
+                          key: "Total Amount",
+                          value: "${order.totalOrderPrice}\$"),
                     ]),
               ],
             ),
