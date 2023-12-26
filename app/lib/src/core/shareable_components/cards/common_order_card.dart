@@ -5,6 +5,7 @@ import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:app/src/core/utils/helper.dart';
 
 class CommonOrderCard extends StatelessWidget {
   const CommonOrderCard({super.key, this.checkBoxCallback});
@@ -36,6 +37,7 @@ class CommonOrderCard extends StatelessWidget {
                 ),
               ],
             ),
+            Helper().hSizeBox(Constance.globalPadding),
             Column(
               children: [
                 buildKeyValueText(
@@ -48,6 +50,7 @@ class CommonOrderCard extends StatelessWidget {
                     ]),
               ],
             ),
+            Helper().hSizeBox(Constance.globalPadding),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               CommonOutlineBtn(
                 btnText: "Details".toUpperCase(),

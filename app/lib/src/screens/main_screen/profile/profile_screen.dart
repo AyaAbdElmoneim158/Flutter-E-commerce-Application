@@ -1,12 +1,12 @@
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/shareable_components/common_app_bar.dart';
-import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/app_strings.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/screens/main_screen/profile/widgets/profile_cards_list_view.dart';
 import 'package:app/src/screens/main_screen/profile/widgets/user_info.dart';
 import 'package:flutter/material.dart';
+import 'package:app/src/core/theme/app_theme.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -19,20 +19,20 @@ class ProfileScreen extends StatelessWidget {
       // appBar: CustomAppBar(style: style, headline: headline) ,
       body: Column(
         children: [
-          const CommonAppBar(
+          CommonAppBar(
             style: 2,
             headline: AppStrings.myProfile,
             hasLeading: false,
-            // action: [
-            //   IconButton(
-            //     onPressed: () {},
-            //     icon: Icon(
-            //       Icons.search,
-            //       size: 24,
-            //       color: AppTheme.getColor(ColorType.text, Constance.isLight),
-            //     ),
-            //   ),
-            // ],
+            action: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.search,
+                  size: 24,
+                  color: AppTheme.getColor(ColorType.text, Constance.isLight),
+                ),
+              ),
+            ],
           ),
           const UserInfo(),
           Helper().hSizeBox(Constance.globalPadding),

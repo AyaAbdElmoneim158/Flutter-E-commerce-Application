@@ -48,15 +48,7 @@ class CommonAppBar extends StatelessWidget {
                               ColorType.text, Constance.isLight)),
                     )
                   : const SizedBox(),
-              (action == null)
-                  ? const SizedBox()
-                  : SizedBox(
-                      height: 150,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: action!,
-                      ),
-                    )
+              (action == null) ? const SizedBox() : Row(children: action!)
             ],
           ),
           (style == 2)

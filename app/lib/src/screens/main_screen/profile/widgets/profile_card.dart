@@ -1,7 +1,7 @@
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/screens/main_screen/profile/profile_model.dart';
+import 'package:app/src/screens/main_screen/profile/model/profile_model.dart';
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
