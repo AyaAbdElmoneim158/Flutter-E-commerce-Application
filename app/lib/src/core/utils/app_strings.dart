@@ -31,4 +31,5 @@ abstract class AppStrings {
   static const String profileUserEmail = "matildabrown@mail.com";
 
   static const String myOrder = "My Order";
+  static const String shippingAddresses = "Shipping Addresses";
 }

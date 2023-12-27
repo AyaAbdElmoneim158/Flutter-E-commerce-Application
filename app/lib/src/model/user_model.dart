@@ -1,3 +1,5 @@
+import 'package:app/src/model/address_model.dart';
+
 class User {
   String name;
   String slug;
@@ -188,44 +190,4 @@ class User {
       updatedAt: DateTime.now(),
     ),
   ];
-}
-
-class Address {
-  String id;
-  String alias;
-  String details;
-  String phone;
-  String city;
-  String postalCode;
-
-  Address({
-    required this.id,
-    required this.alias,
-    required this.details,
-    required this.phone,
-    required this.city,
-    required this.postalCode,
-  });
-
-  factory Address.fromJson(Map<String, dynamic> json) {
-    return Address(
-      id: json['id'],
-      alias: json['alias'],
-      details: json['details'],
-      phone: json['phone'],
-      city: json['city'],
-      postalCode: json['postalCode'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'alias': alias,
-      'details': details,
-      'phone': phone,
-      'city': city,
-      'postalCode': postalCode,
-    };
-  }
 }

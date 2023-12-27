@@ -3,11 +3,18 @@ import 'package:app/src/core/shareable_components/cards/base_card.dart';
 import 'package:app/src/core/shareable_components/form/common_checkbox.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/model/address_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonAddressCard extends StatelessWidget {
-  const CommonAddressCard({super.key, this.checkBoxCallback});
+  const CommonAddressCard({
+    super.key,
+    this.checkBoxCallback,
+    required this.address,
+  });
   final dynamic checkBoxCallback;
+  final Address address;
+
   @override
   Widget build(BuildContext context) {
     return BaseCard(
@@ -21,9 +28,12 @@ class CommonAddressCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "John Doe",
+                  address.city,
                   style: Styles().getText14pxTextStyle(
-                    color: AppTheme.getColor(ColorType.text, Constance.isLight),
+                    color: AppTheme.getColor(
+                      ColorType.text,
+                      Constance.isLight,
+                    ),
                   ),
                 ),
                 TextButton(
@@ -32,14 +42,16 @@ class CommonAddressCard extends StatelessWidget {
                     "Edit",
                     style: Styles().getText16pxTextStyle(
                       color: AppTheme.getColor(
-                          ColorType.primary, Constance.isLight),
+                        ColorType.primary,
+                        Constance.isLight,
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
             Text(
-              "3 Newbridge Court\n Chino Hills, CA 91709, United States",
+              "${address.alias}\n ${address.city} ,${address.postalCode} , ${address.details}",
               style: Styles().getDescriptionTextStyle(
                 color: AppTheme.getColor(ColorType.text, Constance.isLight),
               ),

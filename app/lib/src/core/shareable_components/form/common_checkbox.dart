@@ -21,7 +21,7 @@ class CommonCheckbox extends StatefulWidget {
 }
 
 class _CommonCheckboxState extends State<CommonCheckbox> {
-  bool _checkbox = true;
+  bool _checkbox = false;
 
   @override
   Widget build(BuildContext context) {

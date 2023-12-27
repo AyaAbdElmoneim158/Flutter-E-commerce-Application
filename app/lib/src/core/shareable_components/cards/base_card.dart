@@ -22,8 +22,7 @@ class BaseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(clipBehavior: Clip.none, children: [
       Container(
-        height:
-            isVertical ? Constance.cardHight * 2.3 : Constance.cardHight * 1.2,
+        // height:isVertical ? Constance.cardHight * 2.3 : Constance.cardHight * 1.2,
         width: width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),

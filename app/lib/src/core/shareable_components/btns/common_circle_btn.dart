@@ -12,12 +12,14 @@ class CommonCircleBtn extends StatelessWidget {
     required this.icon,
     this.isClicked = true,
     this.isGrayIcon = false,
+    this.colorData = ColorType.primary,
   });
   final bool isBig;
   final void Function()? onTap;
   final IconData? icon;
   final bool isClicked;
   final bool isGrayIcon;
+  final ColorType colorData;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class CommonCircleBtn extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: isClicked
-                ? AppTheme.getColor(ColorType.primary, Constance.isLight)
+                ? AppTheme.getColor(colorData, Constance.isLight)
                 : AppTheme.getColor(ColorType.card, Constance.isLight),
             boxShadow: isClicked
                 ? [Styles().getPrimaryBtnBoxShadow()]
