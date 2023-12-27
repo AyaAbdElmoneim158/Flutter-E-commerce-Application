@@ -9,7 +9,7 @@ import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:app/src/screens/main_screen/profile/widgets/setting_screen_widgets/build_header_text_setting.dart';
 
-Widget buildBottomSheet(context) {
+Widget buildSettingBottomSheet(context) {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: Constance.globalPadding),
     decoration: BoxDecoration(

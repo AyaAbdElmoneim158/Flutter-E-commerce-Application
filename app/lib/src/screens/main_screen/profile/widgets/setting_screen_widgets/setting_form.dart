@@ -3,7 +3,7 @@ import 'package:app/src/core/shareable_components/form/common_text_field.dart';
 import 'package:app/src/core/utils/app_strings.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/size_config.dart';
-import 'package:app/src/screens/main_screen/profile/widgets/setting_screen_widgets/build_bottom_sheet.dart';
+import 'package:app/src/screens/main_screen/profile/widgets/setting_screen_widgets/build_setting_bottom_sheet.dart';
 import 'package:app/src/screens/main_screen/profile/widgets/setting_screen_widgets/build_header_text_setting.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +34,7 @@ class SettingForm extends StatelessWidget {
             buildHeaderTextSetting(AppStrings.passwordField, true, () {
               showBottomSheet(
                 context: context,
-                builder: (context) => buildBottomSheet(context),
+                builder: (context) => buildSettingBottomSheet(context),
               );
               debugPrint("showBottomSheet");
             }),

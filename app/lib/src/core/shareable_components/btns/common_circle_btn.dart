@@ -1,6 +1,5 @@
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/theme/app_theme.dart';
-import 'package:app/src/core/utils/app_colors.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +43,7 @@ class CommonCircleBtn extends StatelessWidget {
             child: Icon(
               icon,
               color: isClicked
-                  ? AppColors.darkWhiteColor
+                  ? AppTheme.getColor(ColorType.white, Constance.isLight)
                   : isGrayIcon
                       ? AppTheme.getColor(ColorType.gray, Constance.isLight)
                       : AppTheme.getColor(ColorType.primary, Constance.isLight),

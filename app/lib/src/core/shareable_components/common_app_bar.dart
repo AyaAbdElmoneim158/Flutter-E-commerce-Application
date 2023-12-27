@@ -1,6 +1,5 @@
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
-import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -20,13 +19,11 @@ class CommonAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: AppTheme.getColor(ColorType.background, Constance.isLight),
         boxShadow: (style == 3) ? [Styles().getAppBarBoxShadow()] : [],
       ),
-      height: (style == 2)
-          ? SizeConfig.screenHeight! * 0.140
-          : SizeConfig.screenHeight! * 0.80,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,

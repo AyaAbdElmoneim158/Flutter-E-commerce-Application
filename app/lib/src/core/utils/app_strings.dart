@@ -49,6 +49,7 @@ abstract class AppStrings {
   static const String setting = "Settings";
   static const String personalInformation = "Personal Information";
   static const String notifications = "Notifications";
-
   static const String passwordChange = "Password Change";
+
+  static const String paymentMethod = "Payment method";
 }

@@ -53,6 +53,14 @@ mixin TextStyles {
           color: color,
           height: 1.5,
           letterSpacing: -0.15);
+  TextStyle getPaymentNumberCardTextStyle(
+          {Color? color = AppColors.lightText}) =>
+      TextStyle(
+          fontSize: 24,
+          // fontWeight: FontWeight.w400,
+          color: color,
+          // height: 22,
+          letterSpacing: -0.41);
 }
 
 mixin TextFieldBorders {
@@ -134,6 +142,12 @@ mixin Shadow {
         color: Color.fromRGBO(0, 0, 0, 0.08),
         blurRadius: 30,
         offset: Offset(0, -4),
+        spreadRadius: 0,
+      );
+  BoxShadow getPaymentCardBoxShadow() => const BoxShadow(
+        color: Color.fromRGBO(0, 0, 0, 0.08),
+        blurRadius: 25,
+        offset: Offset(0, 1),
         spreadRadius: 0,
       );
 }
