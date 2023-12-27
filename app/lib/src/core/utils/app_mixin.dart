@@ -124,4 +124,10 @@ mixin Shadow {
         offset: Offset(0, -4),
         spreadRadius: 0,
       );
+  BoxShadow getAppBarBoxShadow() => const BoxShadow(
+        color: Color.fromRGBO(0, 0, 0, 0.12),
+        blurRadius: 12,
+        offset: Offset(0, 4),
+        spreadRadius: 0,
+      );
 }

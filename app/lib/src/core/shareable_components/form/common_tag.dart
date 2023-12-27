@@ -22,7 +22,7 @@ class CommonTag extends StatelessWidget {
         height: (styleNumber == 4) ? 35 : 40,
         // width: 100,
         alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
         decoration: BoxDecoration(
           color: getBgColor(styleNumber),
           borderRadius: (styleNumber == 4)

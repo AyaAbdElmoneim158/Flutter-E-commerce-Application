@@ -1,19 +1,14 @@
 import 'package:app/src/core/constance.dart';
-import 'package:app/src/core/shareable_components/btns/common_outline_btn.dart';
-import 'package:app/src/core/shareable_components/btns/common_primary_btn.dart';
-import 'package:app/src/core/shareable_components/cards/build_key_value_text.dart';
-import 'package:app/src/core/shareable_components/cards/common_order_product_card.dart';
 import 'package:app/src/core/shareable_components/common_app_bar.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/size_config.dart';
-import 'package:app/src/core/utils/styles.dart';
 import 'package:app/src/model/order_model.dart';
-import 'package:app/src/screens/main_screen/profile/widgets/order_etails_page_widgets/build_order_details_btns.dart';
-import 'package:app/src/screens/main_screen/profile/widgets/order_etails_page_widgets/build_order_details_header.dart';
-import 'package:app/src/screens/main_screen/profile/widgets/order_etails_page_widgets/build_title.dart';
-import 'package:app/src/screens/main_screen/profile/widgets/order_etails_page_widgets/order_details_items_list_view.dart';
-import 'package:app/src/screens/main_screen/profile/widgets/order_etails_page_widgets/order_info_list_view.dart';
+import 'package:app/src/screens/main_screen/profile/widgets/order_details_page_widgets/build_order_details_btns.dart';
+import 'package:app/src/screens/main_screen/profile/widgets/order_details_page_widgets/build_order_details_header.dart';
+import 'package:app/src/screens/main_screen/profile/widgets/order_details_page_widgets/build_title.dart';
+import 'package:app/src/screens/main_screen/profile/widgets/order_details_page_widgets/order_details_items_list_view.dart';
+import 'package:app/src/screens/main_screen/profile/widgets/order_details_page_widgets/order_info_list_view.dart';
 import 'package:flutter/material.dart';
 
 class OrderDetailsScreen extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/theme/app_theme.dart';
-import 'package:app/src/screens/main_screen/profile/my_order_screen.dart';
+import 'package:app/src/model/order_model.dart';
+import 'package:app/src/screens/main_screen/profile/inner/order_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -16,7 +17,9 @@ class App extends StatelessWidget {
       darkTheme: AppTheme.getThemeData(false),
       // onGenerateRoute: AppRouter.onGenerate,
       // initialRoute: Routes.initRoute,
-      home: const MyOrderScreen(),
+      home: OrderDetailsScreen(
+        order: Order.dummyOrders[3],
+      ),
     );
   }
 }

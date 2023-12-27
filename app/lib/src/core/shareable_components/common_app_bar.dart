@@ -19,12 +19,18 @@ class CommonAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: (style == 1)
-          ? SizeConfig.screenHeight! * 0.080
-          : SizeConfig.screenHeight! * 0.140,
+    return Container(
+      decoration: BoxDecoration(
+        color: AppTheme.getColor(ColorType.background, Constance.isLight),
+        boxShadow: (style == 3) ? [Styles().getAppBarBoxShadow()] : [],
+      ),
+      height:
+          // (style == 1)?
+          SizeConfig.screenHeight! * 0.080,
+      // : SizeConfig.screenHeight! * 0.140,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,7 +59,8 @@ class CommonAppBar extends StatelessWidget {
           ),
           (style == 2)
               ? Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 18, horizontal: 12),
                   child: Text(
                     headline,
                     style: Styles().getHeadlineTextStyle(

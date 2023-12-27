@@ -16,28 +16,29 @@ class ProfileScreen extends StatelessWidget {
     SizeConfig().init(context);
 
     return Scaffold(
-      // appBar: CustomAppBar(style: style, headline: headline) ,
-      body: Column(
-        children: [
-          CommonAppBar(
-            style: 2,
-            headline: AppStrings.myProfile,
-            hasLeading: false,
-            action: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                  size: 24,
-                  color: AppTheme.getColor(ColorType.text, Constance.isLight),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CommonAppBar(
+              style: 2,
+              headline: AppStrings.myProfile,
+              hasLeading: false,
+              action: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.search,
+                    size: 24,
+                    color: AppTheme.getColor(ColorType.text, Constance.isLight),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          const UserInfo(),
-          Helper().hSizeBox(Constance.globalPadding),
-          const ProfileCardsListView(),
-        ],
+              ],
+            ),
+            const UserInfo(),
+            Helper().hSizeBox(Constance.globalPadding),
+            const ProfileCardsListView(),
+          ],
+        ),
       ),
     );
   }
