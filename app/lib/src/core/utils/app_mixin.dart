@@ -130,4 +130,10 @@ mixin Shadow {
         offset: Offset(0, 4),
         spreadRadius: 0,
       );
+  BoxShadow getBottomSheetBoxShadow() => const BoxShadow(
+        color: Color.fromRGBO(0, 0, 0, 0.08),
+        blurRadius: 30,
+        offset: Offset(0, -4),
+        spreadRadius: 0,
+      );
 }

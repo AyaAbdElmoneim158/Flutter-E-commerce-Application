@@ -5,7 +5,9 @@ import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 Widget buildHeaderTextSetting(String personalInformation,
-    [bool isChange = false]) {
+    [bool isChange = false,
+    void Function()? onPressed,
+    String rText = 'Change']) {
   return Padding(
     padding: EdgeInsets.only(bottom: SizeConfig.screenHeight! * 0.016),
     child: Row(
@@ -21,12 +23,15 @@ Widget buildHeaderTextSetting(String personalInformation,
           ),
         ),
         if (isChange)
-          Text(
-            'Change',
-            style: Styles().getText14pxTextStyle(
-              color: AppTheme.getColor(
-                ColorType.gray,
-                Constance.isLight,
+          TextButton(
+            onPressed: onPressed,
+            child: Text(
+              rText,
+              style: Styles().getText14pxTextStyle(
+                color: AppTheme.getColor(
+                  ColorType.gray,
+                  Constance.isLight,
+                ),
               ),
             ),
           ),

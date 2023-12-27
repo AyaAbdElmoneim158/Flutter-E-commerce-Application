@@ -34,7 +34,6 @@ class SettingScreen extends StatelessWidget {
             ),
             const SettingForm(),
             const NotificationOptionListView(),
-            // NotificationOption()
           ],
         ),
       ),
