@@ -24,10 +24,9 @@ class CommonAppBar extends StatelessWidget {
         color: AppTheme.getColor(ColorType.background, Constance.isLight),
         boxShadow: (style == 3) ? [Styles().getAppBarBoxShadow()] : [],
       ),
-      height:
-          // (style == 1)?
-          SizeConfig.screenHeight! * 0.080,
-      // : SizeConfig.screenHeight! * 0.140,
+      height: (style == 2)
+          ? SizeConfig.screenHeight! * 0.140
+          : SizeConfig.screenHeight! * 0.80,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,

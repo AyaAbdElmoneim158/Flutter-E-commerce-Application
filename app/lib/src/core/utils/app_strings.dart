@@ -19,9 +19,7 @@ abstract class AppStrings {
   static const String stateField = "State/Province/Region";
   static const String zipCodeField = "Zip Code (Postal Code)";
   static const String countryField = "Country";
-
-  //
-  //
+  static const String dateOfBirthField = "Date of Birth";
 
   static const String enterEmail =
       "Please, enter your email address. You will receive a link to create a new password via email";
@@ -43,4 +41,8 @@ abstract class AppStrings {
   static const String shippingAddresses = "Shipping Addresses";
   static const String addShippingAddresses = "Adding Shipping Addresses";
   static const String saveAddresses = "Save Addresses";
+
+  static const String setting = "Settings";
+  static const String personalInformation = "Personal Information";
+  static const String notifications = "Notifications";
 }

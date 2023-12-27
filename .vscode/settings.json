@@ -5,6 +5,7 @@
         "hashedpassword",
         "iconly",
         "Promocodes",
-        "RGBO"
+        "RGBO",
+        "vsync"
     ]
 }
