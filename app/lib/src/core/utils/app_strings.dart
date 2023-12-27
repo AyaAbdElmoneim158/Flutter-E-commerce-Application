@@ -13,6 +13,15 @@ abstract class AppStrings {
   static const String signUpWithSocial = "Or sign up with social account";
   static const String loginWithSocial = "Or login with social account";
   static const String forgetPassword = "Forgot your password?";
+  static const String fullNameField = "Full name";
+  static const String addressField = "Address";
+  static const String cityField = "City";
+  static const String stateField = "State/Province/Region";
+  static const String zipCodeField = "Zip Code (Postal Code)";
+  static const String countryField = "Country";
+
+  //
+  //
 
   static const String enterEmail =
       "Please, enter your email address. You will receive a link to create a new password via email";
@@ -32,4 +41,6 @@ abstract class AppStrings {
 
   static const String myOrder = "My Order";
   static const String shippingAddresses = "Shipping Addresses";
+  static const String addShippingAddresses = "Adding Shipping Addresses";
+  static const String saveAddresses = "Save Addresses";
 }

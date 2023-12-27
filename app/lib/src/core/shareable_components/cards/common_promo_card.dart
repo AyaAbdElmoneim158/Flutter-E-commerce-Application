@@ -4,6 +4,7 @@ import 'package:app/src/core/shareable_components/cards/promo_image.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
+import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,7 @@ class CommonPromoCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "mypromocode2020",
+                    "my promo code 2020",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Styles().getText11pxTextStyle(
@@ -70,7 +71,7 @@ class CommonPromoCard extends StatelessWidget {
                     color: AppTheme.getColor(ColorType.gray, Constance.isLight),
                   ),
                 ),
-                Styles().hSizeBox(4),
+                Helper().hSizeBox(4),
                 CommonPrimaryBtn(
                   width: SizeConfig.screenWidth! * 0.3,
                   btnText: 'Apply',

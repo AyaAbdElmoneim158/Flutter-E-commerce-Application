@@ -3,6 +3,7 @@ import 'package:app/src/core/shareable_components/cards/card_image_v.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
+import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,7 @@ class CommonMainProductCard extends StatelessWidget {
                   color: AppTheme.getColor(ColorType.text, Constance.isLight),
                 ),
               ),
-              Styles().wSizeBox(8),
+              Helper().wSizeBox(8),
               if (sale != null)
                 Text(
                   "$sale\$",
