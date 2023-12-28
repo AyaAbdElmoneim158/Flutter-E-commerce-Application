@@ -13,8 +13,8 @@ class CommonSearchBar extends StatelessWidget {
       decoration: Styles.getTextFieldBoxShadow(),
       child: TextField(
         style: Styles().getText16pxRegularTextStyle(),
-        cursorHeight: 13,
         cursorColor: const Color(0xffD9D9D9),
+        textAlignVertical: TextAlignVertical.center,
         decoration: InputDecoration(
           isDense: true,
           filled: true,

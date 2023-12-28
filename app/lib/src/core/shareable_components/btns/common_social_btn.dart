@@ -9,19 +9,19 @@ class CommonSocialBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: SizeConfig.screenHeight! * 0.064,
-      width: SizeConfig.screenHeight! * 0.092,
-      alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      decoration: BoxDecoration(
-        color: AppColors.lightWhiteColor,
-        borderRadius: BorderRadius.circular(24),
-      ),
-      child: SvgPicture.asset(
-        assetName,
-        fit: BoxFit.cover,
-        width: 24,
+    return FittedBox(
+      child: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 24),
+        decoration: BoxDecoration(
+          color: AppColors.lightWhiteColor,
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: SvgPicture.asset(
+          assetName,
+          fit: BoxFit.cover,
+          width: 24,
+        ),
       ),
     );
   }

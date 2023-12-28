@@ -14,20 +14,20 @@ class CommonLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 32,
-      width: 64,
-      alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      decoration:
-          BoxDecoration(color: tagBg, borderRadius: BorderRadius.circular(29)),
-      child: Text(
-        tagText!,
-        style: Styles()
-            .getText11pxTextStyle(color: AppColors.lightWhiteColor)
-            .copyWith(
-              fontWeight: FontWeight.w600,
-            ),
+    return FittedBox(
+      child: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+        decoration: BoxDecoration(
+            color: tagBg, borderRadius: BorderRadius.circular(29)),
+        child: Text(
+          tagText!,
+          style: Styles()
+              .getText11pxTextStyle(color: AppColors.lightWhiteColor)
+              .copyWith(
+                fontWeight: FontWeight.w600,
+              ),
+        ),
       ),
     );
   }

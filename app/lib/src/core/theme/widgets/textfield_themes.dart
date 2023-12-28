@@ -23,6 +23,7 @@ class AppTextFieldThemes {
         color: isLight ? AppColors.lightGrayColor : AppColors.darkGrayColor,
         fontFamily: AppStrings.fontFamily,
         fontWeight: FontWeight.normal,
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }

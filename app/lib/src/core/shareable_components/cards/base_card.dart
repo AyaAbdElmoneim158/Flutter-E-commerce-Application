@@ -8,30 +8,30 @@ class BaseCard extends StatelessWidget {
     super.key,
     required this.child,
     this.childClip = const SizedBox(),
-    this.width,
     this.opacity = 0.08,
     this.isVertical = false,
   });
   final Widget child;
   final Widget childClip;
-  final double? width;
+
   final double opacity;
   final bool isVertical;
 
   @override
   Widget build(BuildContext context) {
-    return Stack(clipBehavior: Clip.none, children: [
-      Container(
-        // height:isVertical ? Constance.cardHight * 2.3 : Constance.cardHight * 1.2,
-        width: width,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          color: AppTheme.getColor(ColorType.card, Constance.isLight),
-          boxShadow: [Styles().getCardBoxShadow(opacity: opacity)],
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: AppTheme.getColor(ColorType.card, Constance.isLight),
+            boxShadow: [Styles().getCardBoxShadow(opacity: opacity)],
+          ),
+          child: child,
         ),
-        child: child,
-      ),
-      Positioned(bottom: -9, right: -9, child: childClip)
-    ]);
+        Positioned(bottom: -9, right: -9, child: childClip)
+      ],
+    );
   }
 }

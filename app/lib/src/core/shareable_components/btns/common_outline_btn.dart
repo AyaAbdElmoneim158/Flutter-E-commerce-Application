@@ -17,12 +17,14 @@ class CommonOutlineBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig ().init(context);
+    SizeConfig().init(context);
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: isBig ? 48 : 36,
-        width: isBig ? SizeConfig.screenWidth! * 0.85 : SizeConfig.screenWidth! * 0.3,
+        padding: EdgeInsets.symmetric(vertical: isBig ? 12 : 8),
+        width: isBig
+            ? SizeConfig.screenWidth! * 0.85
+            : SizeConfig.screenWidth! * 0.3,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),

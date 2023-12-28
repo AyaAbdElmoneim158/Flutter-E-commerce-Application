@@ -1,34 +1,41 @@
 import 'package:app/src/core/shareable_components/cards/base_card.dart';
 import 'package:app/src/core/shareable_components/cards/card_image_v.dart';
+import 'package:app/src/core/shareable_components/form/common_product_rating.dart';
+import 'package:app/src/core/shareable_components/form/common_rating.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
+import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/model/product_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonMainProductCard extends StatelessWidget {
-  const CommonMainProductCard({super.key});
+  const CommonMainProductCard({super.key, required this.product});
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
     return BaseCard(
       isVertical: true,
-      // height: 280,
-      width: 162,
-      child: Column(
-        children: [
-          const CardImageV(
-            imagePath: ImageAssets.mainImage,
-            rightIcon: Icons.favorite_outline,
-          ),
-          _buildCardInfo(), //sale: 16
-        ],
+      child: SizedBox(
+        height: SizeConfig.screenHeight! * 0.33,
+        width: SizeConfig.screenWidth! * 0.5,
+        child: Column(
+          children: [
+            CardImageV(
+              imagePath: product.imageCover,
+              rightIcon: Icons.favorite_outline,
+            ),
+            _buildCardInfo(product: product), //sale: 16
+          ],
+        ),
       ),
     );
   }
 
-  Expanded _buildCardInfo({double? sale}) {
+  Expanded _buildCardInfo({required Product product}) {
     return Expanded(
       flex: 5,
       child: Padding(
@@ -36,36 +43,36 @@ class CommonMainProductCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //!Rating with Package
+            const CommonProductRating(rating: 5),
             Text(
-              "Mongo Boy",
+              product.brand,
               style: Styles().getText11pxTextStyle(
                 color: AppTheme.getColor(ColorType.gray, Constance.isLight),
               ),
             ),
             Text(
-              "T-Shirt Sailing",
+              product.title,
               style: Styles().getText16pxTextStyle(
                 color: AppTheme.getColor(ColorType.text, Constance.isLight),
               ),
             ),
-
-            const Spacer(),
             Row(children: [
               Text(
-                "12\$",
+                "${product.price}\$",
                 style: Styles().getText14pxTextStyle(
                   color: AppTheme.getColor(ColorType.text, Constance.isLight),
                 ),
               ),
               Helper().wSizeBox(8),
-              if (sale != null)
+              if (product == 0.0)
                 Text(
-                  "$sale\$",
+                  "${product.priceAfterDiscount}\$",
                   style: Styles()
                       .getText14pxTextStyle(
                         color: AppTheme.getColor(
-                            ColorType.primary, Constance.isLight),
+                          ColorType.primary,
+                          Constance.isLight,
+                        ),
                       )
                       .copyWith(
                         decoration: TextDecoration.lineThrough,

@@ -2,11 +2,13 @@ import 'package:app/src/core/shareable_components/btns/common_circle_btn.dart';
 import 'package:app/src/core/shareable_components/cards/base_card.dart';
 import 'package:app/src/core/shareable_components/cards/build_key_value_text.dart';
 import 'package:app/src/core/shareable_components/cards/card_image_v.dart';
+import 'package:app/src/core/shareable_components/form/common_product_rating.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/app_colors.dart';
 import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
+import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -16,22 +18,24 @@ class CommonFavoriteVProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      // height: 280,
-      width: 162,
       childClip: const CommonCircleBtn(
         icon: Icons.shopping_bag,
         isBig: false,
       ),
-      child: Column(
-        children: [
-          const CardImageV(
-            imagePath: ImageAssets.mainImage,
-            tagBg: AppColors.lightPrimaryColor,
-            tagText: "-30%",
-            isTagged: true,
-          ),
-          _buildCardInfo(),
-        ],
+      child: SizedBox(
+        height: SizeConfig.screenHeight! * 0.33,
+        width: SizeConfig.screenWidth! * 0.5,
+        child: Column(
+          children: [
+            const CardImageV(
+              imagePath: ImageAssets.mainImage,
+              tagBg: AppColors.lightPrimaryColor,
+              tagText: "-30%",
+              isTagged: true,
+            ),
+            _buildCardInfo(),
+          ],
+        ),
       ),
     );
   }
@@ -46,7 +50,7 @@ class CommonFavoriteVProductCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //!Rating with Package
+            const CommonProductRating(rating: 3.3),
             Text(
               "Mongo",
               style: Styles().getText11pxTextStyle(
@@ -70,7 +74,6 @@ class CommonFavoriteVProductCard extends StatelessWidget {
                 buildKeyValueText(key: "Size: ", value: "L"),
               ],
             ),
-            const Spacer(),
             Text(
               "52\$",
               style: Styles().getText14pxTextStyle(

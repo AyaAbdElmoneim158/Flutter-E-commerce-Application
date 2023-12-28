@@ -16,6 +16,8 @@ class CommonOrderProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseCard(
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           CardImageH(imagePath: orderCartItem.image),
           _buildCardInfo(orderCartItem),
@@ -31,6 +33,7 @@ class CommonOrderProductCard extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               orderCartItem.product,
@@ -45,19 +48,22 @@ class CommonOrderProductCard extends StatelessWidget {
                 buildKeyValueText(key: "Size", value: orderCartItem.size),
               ],
             ),
-            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                buildKeyValueText(
-                    key: "Unit", value: orderCartItem.quantity.toString()),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "${orderCartItem.price}\$",
-                    style: Styles().getText14pxTextStyle(
-                      color:
-                          AppTheme.getColor(ColorType.text, Constance.isLight),
+                Expanded(
+                  child: buildKeyValueText(
+                      key: "Unit", value: orderCartItem.quantity.toString()),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "${orderCartItem.price}\$",
+                      style: Styles().getText14pxTextStyle(
+                        color: AppTheme.getColor(
+                            ColorType.text, Constance.isLight),
+                      ),
                     ),
                   ),
                 ),

@@ -26,7 +26,7 @@ class CommonCategoryProductCard extends StatelessWidget {
 
   Expanded _buildCardInfo() {
     return Expanded(
-      flex: 8,
+      flex: 7,
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: Column(

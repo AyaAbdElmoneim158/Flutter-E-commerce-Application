@@ -16,51 +16,87 @@ mixin SizedBoxes {
 
 mixin TextStyles {
   TextStyle getHeadlineTextStyle({Color? color = AppColors.lightText}) =>
-      TextStyle(fontSize: 34, fontWeight: FontWeight.bold, color: color);
+      TextStyle(
+        fontSize: 34,
+        fontWeight: FontWeight.bold,
+        color: color,
+        overflow: TextOverflow.ellipsis,
+      );
 
   TextStyle getHeadline2TextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-          fontSize: 24, fontWeight: FontWeight.w600, height: 1.2, color: color);
+        fontSize: 24,
+        fontWeight: FontWeight.w600,
+        height: 1.2,
+        color: color,
+        overflow: TextOverflow.ellipsis,
+      );
 
   TextStyle getHeadline3TextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-          fontSize: 18, fontWeight: FontWeight.w600, height: 2.2, color: color);
+        fontSize: 18,
+        fontWeight: FontWeight.w600,
+        height: 2.2,
+        color: color,
+        overflow: TextOverflow.ellipsis,
+      );
 
   TextStyle getText11pxTextStyle({Color? color = AppColors.lightText}) =>
-      TextStyle(fontSize: 11, fontWeight: FontWeight.w400, color: color);
+      TextStyle(
+        fontSize: 11,
+        fontWeight: FontWeight.w400,
+        color: color,
+        overflow: TextOverflow.ellipsis,
+      );
 
   TextStyle getText14pxTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w500,
         color: color,
+        overflow: TextOverflow.ellipsis,
       );
 
   TextStyle getText16pxTextStyle({Color? color = AppColors.lightText}) =>
-      TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: color);
+      TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w600,
+        color: color,
+        overflow: TextOverflow.ellipsis,
+      );
 
   TextStyle getText16pxRegularTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
-        color: color,
-      );
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+          color: color,
+          overflow: TextOverflow.ellipsis);
 
   TextStyle getDescriptionTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w400,
           color: color,
+          overflow: TextOverflow.ellipsis,
           height: 1.5,
           letterSpacing: -0.15);
   TextStyle getPaymentNumberCardTextStyle(
           {Color? color = AppColors.lightText}) =>
       TextStyle(
-          fontSize: 24,
-          // fontWeight: FontWeight.w400,
-          color: color,
-          // height: 22,
-          letterSpacing: -0.41);
+        fontSize: 24,
+        color: color,
+        overflow: TextOverflow.ellipsis,
+        letterSpacing: -0.41,
+      );
+
+  TextStyle getHeadlineHomeTextStyle({double? fontSize = 48, Color? color}) =>
+      TextStyle(
+        fontSize: fontSize,
+        fontWeight: FontWeight.bold,
+        color: color,
+        overflow: TextOverflow.ellipsis,
+        height: 0.9,
+      );
 }
 
 mixin TextFieldBorders {

@@ -25,8 +25,7 @@ class CommonCircleBtn extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-          height: isBig ? 52 : 36,
-          width: isBig ? 52 : 36,
+          padding: EdgeInsets.all(isBig ? 16 : 8),
           alignment: Alignment.center,
           decoration: BoxDecoration(
             shape: BoxShape.circle,

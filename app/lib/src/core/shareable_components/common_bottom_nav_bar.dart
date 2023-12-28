@@ -48,8 +48,6 @@ class _CommonBottomNavBarState extends State<CommonBottomNavBar> {
         color: AppTheme.getColor(ColorType.success, Constance.isLight),
       ),
       child: BottomNavigationBar(
-        backgroundColor: Colors.transparent,
-        // AppTheme.getColor(ColorType.success, Constance.isLight),
         selectedItemColor:
             AppTheme.getColor(ColorType.primary, Constance.isLight),
         unselectedItemColor:

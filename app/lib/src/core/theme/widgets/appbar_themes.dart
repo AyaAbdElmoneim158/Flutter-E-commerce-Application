@@ -12,7 +12,10 @@ class AppBarThemes {
       backgroundColor: isLight
           ? AppColors.lightBackgroundColor
           : AppColors.darkBackgroundColor,
-      titleTextStyle: TextStyle(color: isLight ? Colors.black : Colors.white),
+      titleTextStyle: TextStyle(
+        color: isLight ? Colors.black : Colors.white,
+        overflow: TextOverflow.ellipsis,
+      ),
       elevation: 0,
       iconTheme: AppIconThemes.iconTheme(isLight: isLight),
       actionsIconTheme: AppIconThemes.iconTheme(isLight: isLight),

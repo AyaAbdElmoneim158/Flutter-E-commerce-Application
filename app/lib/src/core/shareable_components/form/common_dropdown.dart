@@ -1,3 +1,4 @@
+import 'package:app/src/core/utils/app_colors.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,6 @@ class _CommonDropdownState extends State<CommonDropdown> {
   String? selectedValue;
   @override
   Widget build(BuildContext context) {
-    // List<String> currency = ["INR", "USD", "SGD", "EUR", "PND"];
-    // List<DropdownMenuItem<String>> _dropDownMenuCurrencyItems;
-    // String currentCurrency = "INR";
     final List<String> genderItems = [
       'Male',
       'Female',
@@ -27,31 +25,34 @@ class _CommonDropdownState extends State<CommonDropdown> {
 
     return DropdownButtonFormField2<String>(
       isExpanded: true,
-      // barrierColor :,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(vertical: 16),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
         ),
-        // ! color of DropDownMenu ~~~~~~~~~~~~~~~~~~~~~~~~~~
         fillColor: AppTheme.getColor(ColorType.background, Constance.isLight),
         filled: true,
       ),
-
       hint: const Text(
         'Select Your gender',
-        style: TextStyle(fontSize: 14),
+        style: TextStyle(
+          fontSize: 14,
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
       items: genderItems
-          .map((item) => DropdownMenuItem<String>(
-                value: item,
-                child: Text(
-                  item,
-                  style: const TextStyle(
-                    fontSize: 14,
-                  ),
+          .map(
+            (item) => DropdownMenuItem<String>(
+              value: item,
+              child: Text(
+                item,
+                style: const TextStyle(
+                  fontSize: 14,
+                  overflow: TextOverflow.ellipsis,
                 ),
-              ))
+              ),
+            ),
+          )
           .toList(),
       validator: (value) {
         if (value == null) {
@@ -59,9 +60,7 @@ class _CommonDropdownState extends State<CommonDropdown> {
         }
         return null;
       },
-      onChanged: (value) {
-        //Do something when selected item is changed.
-      },
+      onChanged: (value) {},
       onSaved: (value) {
         selectedValue = value.toString();
       },
@@ -78,6 +77,10 @@ class _CommonDropdownState extends State<CommonDropdown> {
       dropdownStyleData: DropdownStyleData(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
+          color: AppTheme.getColor(
+            ColorType.background,
+            Constance.isLight,
+          ),
         ),
       ),
       menuItemStyleData: const MenuItemStyleData(

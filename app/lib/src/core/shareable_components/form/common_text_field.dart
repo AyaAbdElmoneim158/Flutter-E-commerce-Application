@@ -18,15 +18,14 @@ class CommonTextField extends StatelessWidget {
     return Container(
       decoration: Styles.getTextFieldBoxShadow(),
       child: TextField(
-        cursorHeight: 13,
         cursorColor: const Color(0xffD9D9D9),
         style: Styles().getText14pxTextStyle(
           color: AppTheme.getColor(ColorType.text, Constance.isLight),
         ),
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(
-            vertical: SizeConfig.screenHeight! * 0.032,
-            horizontal: SizeConfig.screenHeight! * 0.020,
+          contentPadding: const EdgeInsets.symmetric(
+            vertical: 28,
+            horizontal: 16,
           ),
           isDense: true,
           filled: true,
@@ -41,11 +40,6 @@ class CommonTextField extends StatelessWidget {
           hintStyle: Styles().getText14pxTextStyle(
             color: AppTheme.getColor(ColorType.gray, Constance.isLight),
           ),
-          // suffixIcon: const Icon(
-          //   Icons.check,
-          //   size: 16,
-          //   color: AppColors.lightSuccessColor,
-          // ),
         ),
       ),
     );

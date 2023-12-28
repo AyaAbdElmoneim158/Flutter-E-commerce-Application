@@ -28,16 +28,22 @@ class CommonOrderCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Order №1947034",
-                  style: Styles().getText16pxTextStyle(
-                    color: AppTheme.getColor(ColorType.text, Constance.isLight),
+                Expanded(
+                  child: Text(
+                    "Order №1947034",
+                    style: Styles().getText16pxTextStyle(
+                      color:
+                          AppTheme.getColor(ColorType.text, Constance.isLight),
+                    ),
                   ),
                 ),
-                Text(
-                  "${order.deliveredAt}",
-                  style: Styles().getText14pxTextStyle(
-                    color: AppTheme.getColor(ColorType.gray, Constance.isLight),
+                Expanded(
+                  child: Text(
+                    "${order.deliveredAt}",
+                    style: Styles().getText14pxTextStyle(
+                      color:
+                          AppTheme.getColor(ColorType.gray, Constance.isLight),
+                    ),
                   ),
                 ),
               ],

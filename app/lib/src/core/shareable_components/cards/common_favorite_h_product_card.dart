@@ -60,12 +60,11 @@ class CommonFavoriteHProductCard extends StatelessWidget {
             ),
             Row(
               children: [
-                buildKeyValueText(key: "Color: ", value: "Gray"),
+                buildKeyValueText(key: "Color", value: "Gray"),
                 Helper().wSizeBox(8),
-                buildKeyValueText(key: "Size: ", value: "L"),
+                buildKeyValueText(key: "Size", value: "L"),
               ],
             ),
-            const Spacer(),
             Text(
               "52\$",
               style: Styles().getText14pxTextStyle(

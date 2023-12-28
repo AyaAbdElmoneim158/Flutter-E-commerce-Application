@@ -20,7 +20,7 @@ class CardImageH extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: isRight ? 6 : 4,
+      flex: isRight ? 5 : 4,
       child: ClipRRect(
         borderRadius: isRight
             ? const BorderRadius.only(
@@ -37,9 +37,6 @@ class CardImageH extends StatelessWidget {
             Image.asset(
               imagePath,
               fit: BoxFit.cover,
-              // height: 300,
-              // Constance.cardHight * 1.6,
-              width: SizeConfig.screenWidth,
             ),
             if (isTagged)
               Positioned(

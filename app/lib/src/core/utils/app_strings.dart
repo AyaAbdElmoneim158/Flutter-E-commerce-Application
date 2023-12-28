@@ -52,4 +52,9 @@ abstract class AppStrings {
   static const String passwordChange = "Password Change";
 
   static const String paymentMethod = "Payment method";
+  static const String streetClothes = "Street clothes";
+  static const String check = "Check";
+  static const String sale = "Sale";
+  static const String superSummerSale = "Super summer sale";
+  static const String viewAll = "View all";
 }

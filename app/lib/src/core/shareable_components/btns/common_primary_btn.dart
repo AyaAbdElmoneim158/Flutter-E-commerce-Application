@@ -28,14 +28,10 @@ class CommonPrimaryBtn extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: isBig
-            ? SizeConfig.screenHeight! * 0.048
-            : SizeConfig.screenHeight! * 0.036,
-        width: (width != null)
-            ? width
-            : isBig
-                ? SizeConfig.screenWidth! * 0.85
-                : SizeConfig.screenWidth! * 0.3,
+        padding: EdgeInsets.symmetric(vertical: isBig ? 12 : 8),
+        width: isBig
+            ? SizeConfig.screenWidth! * 0.85
+            : SizeConfig.screenWidth! * 0.3,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(SizeConfig.screenHeight! * 0.025),
