@@ -57,4 +57,8 @@ abstract class AppStrings {
   static const String sale = "Sale";
   static const String superSummerSale = "Super summer sale";
   static const String viewAll = "View all";
+  static const String newText = "New";
+  static const String neverSeen = "You'v never seen it before!";
+
+  static const String categories = "Categories";
 }

@@ -1,9 +1,7 @@
 import 'package:app/src/core/shareable_components/cards/base_card.dart';
 import 'package:app/src/core/shareable_components/cards/card_image_v.dart';
 import 'package:app/src/core/shareable_components/form/common_product_rating.dart';
-import 'package:app/src/core/shareable_components/form/common_rating.dart';
 import 'package:app/src/core/theme/app_theme.dart';
-import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/size_config.dart';
@@ -21,7 +19,7 @@ class CommonMainProductCard extends StatelessWidget {
       isVertical: true,
       child: SizedBox(
         height: SizeConfig.screenHeight! * 0.33,
-        width: SizeConfig.screenWidth! * 0.5,
+        width: 240,
         child: Column(
           children: [
             CardImageV(
@@ -37,13 +35,13 @@ class CommonMainProductCard extends StatelessWidget {
 
   Expanded _buildCardInfo({required Product product}) {
     return Expanded(
-      flex: 5,
+      flex: 4,
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const CommonProductRating(rating: 5),
+            CommonProductRating(rating: product.ratingsAverage),
             Text(
               product.brand,
               style: Styles().getText11pxTextStyle(
@@ -59,25 +57,24 @@ class CommonMainProductCard extends StatelessWidget {
             Row(children: [
               Text(
                 "${product.price}\$",
-                style: Styles().getText14pxTextStyle(
-                  color: AppTheme.getColor(ColorType.text, Constance.isLight),
-                ),
+                style: Styles()
+                    .getText14pxTextStyle(
+                      color:
+                          AppTheme.getColor(ColorType.text, Constance.isLight),
+                    )
+                    .copyWith(
+                      decoration: TextDecoration.lineThrough,
+                    ),
               ),
               Helper().wSizeBox(8),
-              if (product == 0.0)
-                Text(
-                  "${product.priceAfterDiscount}\$",
-                  style: Styles()
-                      .getText14pxTextStyle(
-                        color: AppTheme.getColor(
-                          ColorType.primary,
-                          Constance.isLight,
-                        ),
-                      )
-                      .copyWith(
-                        decoration: TextDecoration.lineThrough,
+              if (product.priceAfterDiscount != 0.0)
+                Text("${product.priceAfterDiscount}\$",
+                    style: Styles().getText14pxTextStyle(
+                      color: AppTheme.getColor(
+                        ColorType.primary,
+                        Constance.isLight,
                       ),
-                ),
+                    )),
             ]),
           ],
         ),

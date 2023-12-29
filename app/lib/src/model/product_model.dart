@@ -1,3 +1,5 @@
+import 'package:app/src/core/utils/asset_manager.dart';
+
 class Product {
   String title;
   String slug;
@@ -51,7 +53,7 @@ class Product {
       images: List<String>.from(json['images']),
       category: json['category'],
       subcategories: List<String>.from(json['subcategories']),
-      brand: json['brand'],
+      brand: 'Vans', //! json['brand'],
       ratingsAverage: json['ratingsAverage'],
       ratingsQuantity: json['ratingsQuantity'],
       createdAt: DateTime.parse(json['createdAt']),
@@ -91,14 +93,15 @@ class Product {
       price: 99.99,
       priceAfterDiscount: 79.99,
       colors: ['Red', 'Blue', 'Black'],
-      imageCover: 'running-shoes-cover.jpg',
+      imageCover: ImageAssets.product1Image,
       images: ['running-shoes-image1.jpg', 'running-shoes-image2.jpg'],
       category:
           '60ad68b85f4ae53d8c5e4b05', // Replace with an actual category ID
       subcategories: [
         '60ad68b85f4ae53d8c5e4b0a'
       ], // Replace with actual subcategory IDs
-      brand: '60ad68b85f4ae53d8c5e4b07', // Replace with an actual brand ID
+      brand:
+          'Timberland', //!'60ad68b85f4ae53d8c5e4b07', // Replace with an actual brand ID
       ratingsAverage: 4.5,
       ratingsQuantity: 20,
       createdAt: DateTime.now(),
@@ -113,14 +116,15 @@ class Product {
       price: 29.99,
       priceAfterDiscount: 24.99,
       colors: ['White', 'Black', 'Gray'],
-      imageCover: 'casual-t-shirt-cover.jpg',
+      imageCover: ImageAssets.product2Image,
       images: ['casual-t-shirt-image1.jpg', 'casual-t-shirt-image2.jpg'],
       category:
           '60ad68b85f4ae53d8c5e4b06', // Replace with an actual category ID
       subcategories: [
         '60ad68b85f4ae53d8c5e4b0b'
       ], // Replace with actual subcategory IDs
-      brand: '60ad68b85f4ae53d8c5e4b08', // Replace with an actual brand ID
+      brand:
+          'Fila', //!'60ad68b85f4ae53d8c5e4b08', // Replace with an actual brand ID
       ratingsAverage: 4.0,
       ratingsQuantity: 15,
       createdAt: DateTime.now(),
@@ -136,14 +140,15 @@ class Product {
       price: 79.99,
       priceAfterDiscount: 69.99,
       colors: ['Black', 'White', 'Red'],
-      imageCover: 'wireless-earbuds-cover.jpg',
+      imageCover: ImageAssets.product3Image,
       images: ['wireless-earbuds-image1.jpg', 'wireless-earbuds-image2.jpg'],
       category:
           '60ad68b85f4ae53d8c5e4b07', // Replace with an actual category ID
       subcategories: [
         '60ad68b85f4ae53d8c5e4b0c'
       ], // Replace with actual subcategory IDs
-      brand: '60ad68b85f4ae53d8c5e4b0a', // Replace with an actual brand ID
+      brand:
+          'Reebok', //!'60ad68b85f4ae53d8c5e4b0a', // Replace with an actual brand ID
       ratingsAverage: 4.8,
       ratingsQuantity: 30,
       createdAt: DateTime.now(),
@@ -159,14 +164,15 @@ class Product {
       price: 699.99,
       priceAfterDiscount: 649.99,
       colors: ['Silver', 'Black', 'Gold'],
-      imageCover: 'smartphone-cover.jpg',
+      imageCover: ImageAssets.product5Image,
       images: ['smartphone-image1.jpg', 'smartphone-image2.jpg'],
       category:
           '60ad68b85f4ae53d8c5e4b08', // Replace with an actual category ID
       subcategories: [
         '60ad68b85f4ae53d8c5e4b0d'
       ], // Replace with actual subcategory IDs
-      brand: '60ad68b85f4ae53d8c5e4b0b', // Replace with an actual brand ID
+      brand:
+          'Puma', //!'60ad68b85f4ae53d8c5e4b0b', // Replace with an actual brand ID
       ratingsAverage: 4.5,
       ratingsQuantity: 25,
       createdAt: DateTime.now(),
@@ -181,14 +187,15 @@ class Product {
       price: 1299.99,
       priceAfterDiscount: 1199.99,
       colors: ['Silver', 'Space Gray'],
-      imageCover: 'laptop-cover.jpg',
+      imageCover: ImageAssets.product6Image,
       images: ['laptop-image1.jpg', 'laptop-image2.jpg'],
       category:
           '60ad68b85f4ae53d8c5e4b09', // Replace with an actual category ID
       subcategories: [
         '60ad68b85f4ae53d8c5e4b0e'
       ], // Replace with actual subcategory IDs
-      brand: '60ad68b85f4ae53d8c5e4b0c', // Replace with an actual brand ID
+      brand:
+          "Adidas", //!'60ad68b85f4ae53d8c5e4b0c', // Replace with an actual brand ID
       ratingsAverage: 4.9,
       ratingsQuantity: 15,
       createdAt: DateTime.now(),
@@ -204,14 +211,15 @@ class Product {
       price: 49.99,
       priceAfterDiscount: 39.99,
       colors: ['Black', 'Blue', 'Pink'],
-      imageCover: 'fitness-tracker-cover.jpg',
+      imageCover: ImageAssets.product7Image,
       images: ['fitness-tracker-image1.jpg', 'fitness-tracker-image2.jpg'],
       category:
           '60ad68b85f4ae53d8c5e4b07', // Replace with an actual category ID
       subcategories: [
         '60ad68b85f4ae53d8c5e4b0f'
       ], // Replace with actual subcategory IDs
-      brand: '60ad68b85f4ae53d8c5e4b0a', // Replace with an actual brand ID
+      brand:
+          'Under Armour', //!'60ad68b85f4ae53d8c5e4b0a', // Replace with an actual brand ID
       ratingsAverage: 4.7,
       ratingsQuantity: 20,
       createdAt: DateTime.now(),

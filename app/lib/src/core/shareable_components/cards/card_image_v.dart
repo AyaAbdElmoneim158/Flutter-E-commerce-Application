@@ -33,7 +33,7 @@ class CardImageV extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 7,
+      flex: 8,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8),
         child: Stack(
@@ -42,7 +42,7 @@ class CardImageV extends StatelessWidget {
             Image.asset(
               imagePath,
               fit: BoxFit.cover,
-              height: Constance.cardHight * 1.6,
+              // height: Constance.cardHight * 1.6,
               width: double.infinity,
             ),
             if (isTagged)

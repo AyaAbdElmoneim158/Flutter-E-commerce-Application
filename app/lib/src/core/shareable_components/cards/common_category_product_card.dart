@@ -1,13 +1,17 @@
 import 'package:app/src/core/shareable_components/cards/base_card.dart';
 import 'package:app/src/core/shareable_components/cards/card_image_h.dart';
 import 'package:app/src/core/theme/app_theme.dart';
-import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/model/category_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonCategoryProductCard extends StatelessWidget {
-  const CommonCategoryProductCard({super.key});
+  const CommonCategoryProductCard({
+    super.key,
+    required this.category,
+  });
+  final Category category;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +19,9 @@ class CommonCategoryProductCard extends StatelessWidget {
       child: Row(
         children: [
           _buildCardInfo(),
-          const CardImageH(
-            imagePath: ImageAssets.mainImage,
+          CardImageH(
+            // isSvg: true,
+            imagePath: category.image,
             isRight: true,
           ),
         ],
@@ -34,7 +39,7 @@ class CommonCategoryProductCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "New",
+              category.name,
               style: Styles().getHeadline3TextStyle(
                 color: AppTheme.getColor(ColorType.text, Constance.isLight),
               ),
