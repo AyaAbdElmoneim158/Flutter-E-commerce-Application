@@ -10,18 +10,20 @@ class CommonAppBar extends StatelessWidget {
     required this.headline,
     this.hasLeading = true,
     this.action,
+    this.bgColor = ColorType.background,
   });
   final int style;
   final String headline;
   final bool hasLeading;
   final List<Widget>? action;
+  final ColorType bgColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: AppTheme.getColor(ColorType.background, Constance.isLight),
+        color: AppTheme.getColor(bgColor, Constance.isLight),
         boxShadow: (style == 3) ? [Styles().getAppBarBoxShadow()] : [],
       ),
       child: Column(

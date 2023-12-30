@@ -1,6 +1,9 @@
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/screens/main_screen/category/widgets/category_details_screen_widgets/builder_bottom_sheet_filter.dart';
+import 'package:app/src/screens/main_screen/category/widgets/category_details_screen_widgets/builder_bottom_sheet_selected_size.dart';
+import 'package:app/src/screens/main_screen/category/widgets/category_details_screen_widgets/builder_bottom_sheet_sort.dart';
 import 'package:flutter/material.dart';
 
 class CommonFilter extends StatelessWidget {
@@ -17,7 +20,12 @@ class CommonFilter extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           TextButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              showBottomSheet(
+                  context: context,
+                  builder: (context) => const BuilderBottomSheetFilter());
+              debugPrint("showBottomSheet");
+            },
             icon: Icon(
               Icons.filter,
               color: AppTheme.getColor(
@@ -36,7 +44,12 @@ class CommonFilter extends StatelessWidget {
             ),
           ),
           TextButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              showBottomSheet(
+                  context: context,
+                  builder: (context) => const BuilderBottomSheetSort());
+              debugPrint("showBottomSheet");
+            },
             icon: Icon(
               Icons.arrow_downward_rounded,
               color: AppTheme.getColor(
@@ -62,7 +75,12 @@ class CommonFilter extends StatelessWidget {
                 Constance.isLight,
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              showBottomSheet(
+                  context: context,
+                  builder: (context) => const BuilderBottomSheetSelectedSize());
+              debugPrint("showBottomSheet");
+            },
           )
         ],
       ),

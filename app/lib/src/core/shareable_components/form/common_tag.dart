@@ -18,38 +18,31 @@ class CommonTag extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: FittedBox(
-        child: Container(
-          // height: (styleNumber == 4) ? 35 : 40,
-          alignment: Alignment.center,
-          padding: const EdgeInsets.symmetric(
-            horizontal: 24,
-            vertical: 8,
-          ),
-          decoration: BoxDecoration(
-            color: getBgColor(styleNumber),
-            borderRadius: (styleNumber == 4)
-                ? BorderRadius.circular(29)
-                : BorderRadius.circular(8),
-            border: (styleNumber != 1)
-                ? null
-                : Border.all(
-                    width: 1.3,
-                    color: AppTheme.getColor(
-                      ColorType.gray,
-                      Constance.isLight,
-                    ),
+      child: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 57,
+          // vertical: 1,
+        ),
+        decoration: BoxDecoration(
+          color: getBgColor(styleNumber),
+          borderRadius: (styleNumber == 4)
+              ? BorderRadius.circular(29)
+              : BorderRadius.circular(8),
+          border: (styleNumber != 1)
+              ? null
+              : Border.all(
+                  width: 1.3,
+                  color: AppTheme.getColor(
+                    ColorType.gray,
+                    Constance.isLight,
                   ),
-          ),
-          child: Text(
-            tagText!,
-            style: Styles()
-                .getText14pxTextStyle(
-                  color: getColor(styleNumber),
-                )
-                .copyWith(
-                  fontWeight: FontWeight.w600,
                 ),
+        ),
+        child: Text(
+          tagText!,
+          style: Styles().getText14pxTextStyle(
+            color: getColor(styleNumber),
           ),
         ),
       ),

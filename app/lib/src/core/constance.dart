@@ -2,6 +2,7 @@ import 'package:app/src/core/utils/size_config.dart';
 
 abstract class Constance {
   static bool isLight = true;
+  static var viewList = ViewList.horizontal;
   static const String appName = "E-commerce App";
   static const double globalRadius = 12;
   static const double textFieldBorderRadius = 8;
@@ -31,3 +32,5 @@ enum ThemeModeType {
   dark,
   light,
 }
+
+enum ViewList { horizontal, vertical }

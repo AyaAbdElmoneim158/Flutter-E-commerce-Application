@@ -16,7 +16,7 @@ class CommonProductRating extends StatelessWidget {
       allowHalfRating: true,
       itemCount: 5,
       itemSize: 16,
-      itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+      // itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
       itemBuilder: (context, index) => (index < rating)
           ? const Icon(
               Icons.star_rounded,

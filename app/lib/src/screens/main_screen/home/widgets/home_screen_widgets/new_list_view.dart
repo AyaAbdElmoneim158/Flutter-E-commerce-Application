@@ -21,12 +21,16 @@ class NewListView extends StatelessWidget {
             type: AppStrings.newText,
           ),
           SizedBox(
-            height: SizeConfig.screenHeight! * 0.33,
+            height: SizeConfig.screenHeight! * 0.37,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
-              itemBuilder: (context, index) => CommonMainProductCard(
-                product: Product.dummyProducts[index],
+              itemBuilder: (context, index) => SizedBox(
+                height: SizeConfig.screenHeight! * 0.37,
+                width: 240,
+                child: CommonMainProductCard(
+                  product: Product.dummyProducts[index],
+                ),
               ),
               separatorBuilder: (context, index) =>
                   Helper().wSizeBox(Constance.globalPadding * 1.5),

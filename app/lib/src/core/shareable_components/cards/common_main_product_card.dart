@@ -1,10 +1,9 @@
+import 'package:app/src/core/shareable_components/btns/common_circle_btn.dart';
 import 'package:app/src/core/shareable_components/cards/base_card.dart';
-import 'package:app/src/core/shareable_components/cards/card_image_v.dart';
 import 'package:app/src/core/shareable_components/form/common_product_rating.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
-import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:app/src/model/product_model.dart';
 import 'package:flutter/material.dart';
@@ -18,15 +17,31 @@ class CommonMainProductCard extends StatelessWidget {
     return BaseCard(
       isVertical: true,
       child: SizedBox(
-        height: SizeConfig.screenHeight! * 0.33,
-        width: 240,
-        child: Column(
+        child: Stack(
+          clipBehavior: Clip.none,
           children: [
-            CardImageV(
-              imagePath: product.imageCover,
-              rightIcon: Icons.favorite_outline,
+            Column(
+              children: [
+                Image.asset(
+                  product.imageCover,
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  // height: SizeConfig.screenHeight! * 0.03,
+                ),
+                _buildCardInfo(product: product), //sale: 16
+              ],
             ),
-            _buildCardInfo(product: product), //sale: 16
+            Positioned(
+              bottom: 72,
+              right: -9,
+              child: CommonCircleBtn(
+                onTap: () {},
+                icon: Icons.favorite_outline,
+                isBig: false,
+                isClicked: false,
+                isGrayIcon: true,
+              ),
+            ),
           ],
         ),
       ),
