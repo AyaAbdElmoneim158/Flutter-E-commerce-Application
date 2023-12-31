@@ -7,10 +7,12 @@ import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/model/coupon_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonPromoCard extends StatelessWidget {
-  const CommonPromoCard({super.key});
+  const CommonPromoCard({super.key, required this.coupon});
+  final Coupon coupon;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,9 @@ class CommonPromoCard extends StatelessWidget {
       // height: Constance.promoCardHight,
       child: Row(
         children: [
-          const PromoImage(
+          PromoImage(
             promoImage: ImageAssets.mainImage,
+            promo: coupon.discount,
           ),
           _buildCardInfo(context),
         ],
@@ -42,7 +45,7 @@ class CommonPromoCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Personal offer",
+                    coupon.name,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Styles().getText14pxTextStyle(
@@ -51,7 +54,7 @@ class CommonPromoCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "my promo code 2020",
+                    coupon.name,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Styles().getText11pxTextStyle(
@@ -64,7 +67,7 @@ class CommonPromoCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  "6 days remaining",
+                  coupon.expire.toString(),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: Styles().getText11pxTextStyle(

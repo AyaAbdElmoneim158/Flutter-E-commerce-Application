@@ -23,7 +23,7 @@ class CommonAppBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: AppTheme.getColor(bgColor, Constance.isLight),
+        color: AppTheme.getColor(ColorType.background, Constance.isLight),
         boxShadow: (style == 3) ? [Styles().getAppBarBoxShadow()] : [],
       ),
       child: Column(

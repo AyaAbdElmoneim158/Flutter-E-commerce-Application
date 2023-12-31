@@ -1,23 +1,32 @@
 import 'package:app/src/core/shareable_components/btns/common_circle_btn.dart';
 import 'package:app/src/core/shareable_components/cards/base_card.dart';
 import 'package:app/src/core/shareable_components/cards/build_key_value_text.dart';
-import 'package:app/src/core/shareable_components/cards/card_image_h.dart';
 import 'package:app/src/core/theme/app_theme.dart';
-import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/model/order_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonBagProductCard extends StatelessWidget {
-  const CommonBagProductCard({super.key});
+  const CommonBagProductCard({
+    super.key,
+    required this.orderItem,
+  });
+  final OrderCartItem orderItem;
 
   @override
   Widget build(BuildContext context) {
     return BaseCard(
       child: Row(
         children: [
-          const CardImageH(imagePath: ImageAssets.mainImage),
+          Flexible(
+            flex: 4,
+            child: Image.asset(
+              orderItem.image,
+              fit: BoxFit.cover,
+            ),
+          ),
           _buildCardInfo(),
         ],
       ),
@@ -27,8 +36,8 @@ class CommonBagProductCard extends StatelessWidget {
   Widget _buildCardInfo() {
     return Flexible(
       flex: 8,
-      // ignore: avoid_unnecessary_containers
-      child: Container(
+      //! ignore: avoid_unnecessary_containers
+      child: SizedBox(
         // height:,
         // color: Colors.green, //ToDo: Solve Hight Problem
         child: Padding(
@@ -41,7 +50,7 @@ class CommonBagProductCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Pullover",
+                    orderItem.product,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Styles().getText16pxTextStyle(
@@ -60,9 +69,9 @@ class CommonBagProductCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  buildKeyValueText(key: "Color: ", value: "Gray"),
+                  buildKeyValueText(key: "Color: ", value: orderItem.color),
                   Helper().wSizeBox(8),
-                  buildKeyValueText(key: "Size: ", value: "L"),
+                  buildKeyValueText(key: "Size: ", value: orderItem.size),
                 ],
               ),
               Row(
@@ -78,7 +87,7 @@ class CommonBagProductCard extends StatelessWidget {
                       ),
                       Helper().wSizeBox(12),
                       Text(
-                        "1",
+                        orderItem.quantity.toString(),
                         style: Styles().getText14pxTextStyle(
                           color: AppTheme.getColor(
                               ColorType.text, Constance.isLight),
@@ -96,7 +105,7 @@ class CommonBagProductCard extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "52\$",
+                      "${orderItem.price}\$",
                       style: Styles().getText14pxTextStyle(
                         color: AppTheme.getColor(
                             ColorType.text, Constance.isLight),

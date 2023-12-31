@@ -77,7 +77,7 @@ mixin TextStyles {
           fontSize: 14,
           fontWeight: FontWeight.w400,
           color: color,
-          overflow: TextOverflow.ellipsis,
+          // overflow: TextOverflow.ellipsis,
           height: 1.5,
           letterSpacing: -0.15);
   TextStyle getPaymentNumberCardTextStyle(

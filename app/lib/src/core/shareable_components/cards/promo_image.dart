@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class PromoImage extends StatelessWidget {
   const PromoImage({super.key, this.promo = 10, this.promoImage});
-  final int promo;
+  final double promo;
   final String? promoImage;
 
   @override

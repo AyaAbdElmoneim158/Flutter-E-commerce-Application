@@ -15,6 +15,9 @@ abstract class ImageAssets {
   static const String ellipse = '$iconPath/Ellipse.png';
   static const String chipIcon = '$iconPath/chip.svg';
   static const String mastercardIcon = '$iconPath/mastercard.svg';
+  static const String dhlIcon = '$iconPath/dhl.svg';
+  static const String fedexIcon = '$iconPath/fedex.svg';
+  static const String uspsIcon = '$iconPath/usps.svg';
 
   static const String product1Image = '$imagePath/product1.png';
   static const String product2Image = '$imagePath/product2.png';
@@ -28,11 +31,11 @@ abstract class ImageAssets {
   static const String product10Image = '$imagePath/product10.png';
   static const String product11Image = '$imagePath/product11.png';
   static const String product12Image = '$imagePath/product12.png';
-  static const String product13Image = '$iconPath/product13.svg';
-  static const String product14Image = '$iconPath/product14.svg';
-  static const String product15Image = '$iconPath/product15.svg';
-  static const String product16Image = '$iconPath/product16.svg';
-  static const String product17Image = '$iconPath/product17.svg';
+  static const String product13Image = '$imagePath/product13.svg';
+  static const String product14Image = '$imagePath/product14.svg';
+  static const String product15Image = '$imagePath/product15.svg';
+  static const String product16Image = '$imagePath/product16.svg';
+  static const String product17Image = '$imagePath/product17.svg';
   static const String product18Image = '$imagePath/product18.png';
   static const String product19Image = '$imagePath/product19.png';
 
@@ -49,4 +52,6 @@ abstract class ImageAssets {
 
   static const String banner1Image = '$imagePath/banner1.png';
   static const String banner2Image = '$imagePath/banner2.png';
+
+  static const String bagsImage = '$imagePath/bags.svg';
 }

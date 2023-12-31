@@ -6,7 +6,11 @@ import 'package:app/src/core/theme/app_theme.dart';
 class CommonDropdown extends StatefulWidget {
   const CommonDropdown({
     Key? key,
+    required this.hintText,
+    required this.genderItems,
   }) : super(key: key);
+  final String hintText;
+  final List<String> genderItems;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -17,11 +21,6 @@ class _CommonDropdownState extends State<CommonDropdown> {
   String? selectedValue;
   @override
   Widget build(BuildContext context) {
-    final List<String> genderItems = [
-      'Male',
-      'Female',
-    ];
-
     return DropdownButtonFormField2<String>(
       isExpanded: true,
       decoration: InputDecoration(
@@ -32,22 +31,24 @@ class _CommonDropdownState extends State<CommonDropdown> {
         fillColor: AppTheme.getColor(ColorType.background, Constance.isLight),
         filled: true,
       ),
-      hint: const Text(
-        'Select Your gender',
+      hint: Text(
+        widget.hintText,
         style: TextStyle(
           fontSize: 14,
           overflow: TextOverflow.ellipsis,
+          color: AppTheme.getColor(ColorType.gray, Constance.isLight),
         ),
       ),
-      items: genderItems
+      items: widget.genderItems
           .map(
             (item) => DropdownMenuItem<String>(
               value: item,
               child: Text(
                 item,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 14,
                   overflow: TextOverflow.ellipsis,
+                  color: AppTheme.getColor(ColorType.text, Constance.isLight),
                 ),
               ),
             ),
@@ -66,10 +67,10 @@ class _CommonDropdownState extends State<CommonDropdown> {
       buttonStyleData: const ButtonStyleData(
         padding: EdgeInsets.only(right: 8),
       ),
-      iconStyleData: const IconStyleData(
+      iconStyleData: IconStyleData(
         icon: Icon(
           Icons.arrow_drop_down,
-          color: Colors.black45,
+          color: AppTheme.getColor(ColorType.text, Constance.isLight),
         ),
         iconSize: 24,
       ),

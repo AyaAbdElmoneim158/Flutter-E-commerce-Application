@@ -11,9 +11,11 @@ class CommonAddressCard extends StatelessWidget {
     super.key,
     this.checkBoxCallback,
     required this.address,
+    this.hasCheckBox = true,
   });
   final dynamic checkBoxCallback;
   final Address address;
+  final bool hasCheckBox;
 
   @override
   Widget build(BuildContext context) {
@@ -56,12 +58,13 @@ class CommonAddressCard extends StatelessWidget {
                 color: AppTheme.getColor(ColorType.text, Constance.isLight),
               ),
             ),
-            CommonCheckbox(
-              callback: (val) {
-                if (checkBoxCallback != null) checkBoxCallback(val);
-              },
-              title: 'Use as the shipping address',
-            ),
+            if (hasCheckBox)
+              CommonCheckbox(
+                callback: (val) {
+                  if (checkBoxCallback != null) checkBoxCallback(val);
+                },
+                title: 'Use as the shipping address',
+              ),
           ],
         ),
       ),

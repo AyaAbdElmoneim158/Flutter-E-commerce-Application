@@ -4,14 +4,15 @@ import 'package:app/src/core/shareable_components/cards/build_key_value_text.dar
 import 'package:app/src/core/shareable_components/cards/card_image_h.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/app_colors.dart';
-import 'package:app/src/core/utils/asset_manager.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/model/product_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonFavoriteHProductCard extends StatelessWidget {
-  const CommonFavoriteHProductCard({super.key});
+  const CommonFavoriteHProductCard({super.key, required this.product});
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +23,10 @@ class CommonFavoriteHProductCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const CardImageH(
-            imagePath: ImageAssets.mainImage,
+          CardImageH(
+            imagePath: product.imageCover,
             tagBg: AppColors.lightPrimaryColor,
-            tagText: "-30%",
+            tagText: '${product.priceAfterDiscount}%',
             isTagged: true,
           ),
           _buildCardInfo(),
@@ -45,13 +46,13 @@ class CommonFavoriteHProductCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Lime".toUpperCase(),
+              product.brand.toUpperCase(),
               style: Styles().getText11pxTextStyle(
                 color: AppTheme.getColor(ColorType.gray, Constance.isLight),
               ),
             ),
             Text(
-              "Shirt",
+              product.title,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: Styles().getText16pxTextStyle(
@@ -60,13 +61,13 @@ class CommonFavoriteHProductCard extends StatelessWidget {
             ),
             Row(
               children: [
-                buildKeyValueText(key: "Color", value: "Gray"),
+                buildKeyValueText(key: "Color", value: product.colors[0]),
                 Helper().wSizeBox(8),
-                buildKeyValueText(key: "Size", value: "L"),
+                buildKeyValueText(key: "Size", value: "M"),
               ],
             ),
             Text(
-              "52\$",
+              "${product.price}\$",
               style: Styles().getText14pxTextStyle(
                 color: AppTheme.getColor(ColorType.text, Constance.isLight),
               ),
