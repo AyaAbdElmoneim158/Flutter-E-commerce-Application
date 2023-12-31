@@ -22,7 +22,7 @@ class _CategoryDetailsScreenState extends State<CategoryDetailsScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const CategoryDetailsHeader(),
+            const CategoryDetailsHeader(title: "Women's tops"),
             (Constance.viewList == ViewList.horizontal)
                 ? const CategoryDetailsHListView()
                 : const CategoryDetailsVListView(),

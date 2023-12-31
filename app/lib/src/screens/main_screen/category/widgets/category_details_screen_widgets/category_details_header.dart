@@ -9,19 +9,21 @@ import 'package:flutter/material.dart';
 class CategoryDetailsHeader extends StatelessWidget {
   const CategoryDetailsHeader({
     super.key,
+    required this.title,
   });
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Material(
       color: AppTheme.getColor(
-        ColorType.white,
+        ColorType.background,
         Constance.isLight,
       ),
       child: Column(
         children: [
           CommonAppBar(
-            headline: "Women's tops",
+            headline: title,
             style: 2,
             action: [
               IconButton(
