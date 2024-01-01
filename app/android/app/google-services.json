@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "899409460852",
+    "project_id": "testapp-fb888",
+    "storage_bucket": "testapp-fb888.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899409460852:android:ad5c9491cbec1ec9109b21",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeV56StBEmEwSo55y9szjvH3-oPjTZbc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899409460852:android:beae9246ac44416f109b21",
+        "android_client_info": {
+          "package_name": "com.example.projects"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeV56StBEmEwSo55y9szjvH3-oPjTZbc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

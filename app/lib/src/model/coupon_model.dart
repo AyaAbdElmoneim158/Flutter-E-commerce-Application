@@ -1,3 +1,15 @@
+/*
+String id; // Unique identifier for the coupon
+  String code; // Coupon code
+  double discountPercentage; // Percentage of the discount
+  DateTime expirationDate; // Expiration date of the coupon
+ 
+ String id; // Unique identifier for the coupon
+  String code; // Coupon code
+  double discountPercentage; // Percentage of the discount
+  DateTime expirationDate; // Expiration date of the coupon
+  List<String> applicableProductIds; // List of product IDs to which the coupon is applicable
+ */
 class Coupon {
   String name;
   DateTime expire;

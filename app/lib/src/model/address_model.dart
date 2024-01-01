@@ -1,3 +1,14 @@
+/*
+  String? id; // Unique identifier for the address
+  String recipientName; // Name of the person receiving the package
+  String street; // Street address
+  String city; // City
+  String state; // State or region
+  String postalCode; // Postal or ZIP code
+  String country; // Country
+  String phoneNumber; // Phone number for contact
+  bool isDefault; // Indicates if this is the default address
+ */
 class Address {
   String id;
   String alias;

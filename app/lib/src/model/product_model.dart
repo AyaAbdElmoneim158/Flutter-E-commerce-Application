@@ -1,5 +1,29 @@
 import 'package:app/src/core/utils/asset_manager.dart';
+/*
+ String id; // Unique identifier for the product
+  String name; // Name of the product
+  String description; // Description of the product
+  double price; // Price of the product
+  String imageUrl; // URL or path to the product's image
+  String categoryId; // Category ID to which the product belongs
+  List<String> sizes; // Available sizes for the product (e.g., ["S", "M", "L"])
+  List<String> colors; // Available colors for the product
+  String brand; // Brand of the product
+  bool isNewArrival; // Indicates if the product is a new arrival
+  bool isSale; // Indicates if the product is on sale
+  double discountPercentage; // Percentage of the discount if the product is on sale
+  List<String> tags; // Tags associated with the product (e.g., ["Casual", "Summer"])
+  int inventory; // Available inventory or stock quantity
+ 
+ sizes and colors represent the available size options and color variants for the product.
+brand indicates the brand of the product.
+isNewArrival and isSale are boolean flags indicating whether the product is a new arrival or is on sale.
+discountPercentage specifies the percentage discount if the product is on sale.
+tags represent additional descriptors associated with the product.
+inventory indicates the available stock quantity.
 
+ 
+ */
 class Product {
   String title;
   String slug;

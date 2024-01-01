@@ -1,5 +1,16 @@
 import 'package:app/src/core/utils/asset_manager.dart';
-
+/*
+String id; // Unique identifier for the category
+  String name; // Name of the category
+  String? description; // Description of the category
+  String? imageUrl; // URL or path to the category's image
+  List<Product> products;// List of products in the category
+ 
+  String id; // Unique identifier for the category
+  String name; // Name of the category
+  String imageUrl; // URL or path to the category's image
+  List<String> subcategories; // List of subcategory names (if applicable)
+ */
 class Category {
   String name;
   String slug;

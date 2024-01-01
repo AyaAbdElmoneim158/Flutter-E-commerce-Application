@@ -1,5 +1,12 @@
 import 'package:app/src/model/address_model.dart';
-
+/*
+ String id; // Unique identifier for the user
+  String email; // Email address of the user
+  String displayName; // Display name or username of the user
+  String photoURL; // URL or path to the user's profile image
+  List<String> favoriteProductIds; // List of product IDs that the user has marked as favorites
+  List<Order> orders; // List of orders placed by the user
+ */
 class User {
   String name;
   String slug;

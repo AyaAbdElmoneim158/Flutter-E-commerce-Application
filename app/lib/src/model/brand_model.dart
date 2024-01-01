@@ -1,4 +1,10 @@
-class Brand {
+
+/*
+String? id; // Unique identifier for the brand
+  String name; // Name of the brand
+  String? description; // Description of the brand
+  String? imageUrl; // URL or path to the brand's logo/image
+*/class Brand {
   String name;
   String slug;
   String image;

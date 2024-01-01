@@ -1,6 +1,22 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
+/*
+String id; // Unique identifier for the order
+  List<OrderItem> items; // List of items in the order
+  double totalAmount; // Total amount of the order
+  DateTime orderDate; // Date and time when the order was placed
+  String userId; // User ID associated with the order
+  String status; // Order status (e.g., "Processing", "Shipped", "Delivered")
 
+  String id; // Unique identifier for the order
+  String userId; // User ID associated with the order
+  List<OrderItem> items; // List of items in the order
+  double totalAmount; // Total amount of the order
+  String status; // Order status (e.g., "Processing", "Shipped", "Delivered")
+  DateTime orderDate; // Date and time when the order was placed
+  Address shippingAddress; // Shipping address for the order
+  String paymentMethod; // Payment method used for the order
+ */
 class Order {
   String user;
   List<OrderCartItem> cartItems;

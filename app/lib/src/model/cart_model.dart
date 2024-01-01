@@ -119,7 +119,13 @@ class Cart {
     ),
   ];
 }
-
+/*
+ String id; // Unique identifier for the item
+  String name; // Name of the item
+  double price; // Price of the item
+  int quantity; // Quantity of the item in the cart
+  String imageUrl; // URL or path to the image of the item
+ */
 class CartItem {
   String product;
   int quantity;

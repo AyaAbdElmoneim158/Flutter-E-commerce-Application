@@ -1,3 +1,14 @@
+/*
+ String id; // Unique identifier for the review
+  String productId; // Product ID associated with the review
+  String userId; // User ID who wrote the review
+  String userName; // Display name of the user who wrote the review
+  String userImage; // URL or path to the user's profile image
+  double rating; // Rating given by the user (e.g., 1 to 5 stars)
+  String title; // Title of the review
+  String content; // Content of the review
+  DateTime date; // Date when the review was submitted
+ */
 class Review {
   String title;
   double ratings;

@@ -1,3 +1,9 @@
+/*
+ String id; // Unique identifier for the subcategory
+  String name; // Name of the subcategory
+  String imageUrl; // URL or path to the subcategory's image
+  String categoryId; // ID of the parent category to which the subcategory belongs
+ */
 class SubCategory {
   String name;
   String slug;
