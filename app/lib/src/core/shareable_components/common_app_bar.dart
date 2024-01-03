@@ -21,7 +21,7 @@ class CommonAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8),
+      // padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: AppTheme.getColor(ColorType.background, Constance.isLight),
         boxShadow: (style == 3) ? [Styles().getAppBarBoxShadow()] : [],

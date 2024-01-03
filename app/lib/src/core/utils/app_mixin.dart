@@ -186,4 +186,11 @@ mixin Shadow {
         offset: Offset(0, 1),
         spreadRadius: 0,
       );
+
+  BoxShadow getSplashBoxShadow() => const BoxShadow(
+        color: Color.fromRGBO(0, 0, 0, 0.1),
+        blurRadius: 8,
+        offset: Offset(0, -4),
+        spreadRadius: 0,
+      );
 }

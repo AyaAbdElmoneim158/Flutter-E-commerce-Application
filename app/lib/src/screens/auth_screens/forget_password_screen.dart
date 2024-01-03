@@ -1,12 +1,9 @@
 import 'package:app/src/core/constance.dart';
-import 'package:app/src/core/shareable_components/btns/common_primary_btn.dart';
-import 'package:app/src/core/shareable_components/custom_app_bar.dart';
-import 'package:app/src/core/shareable_components/form/common_text_field.dart';
-import 'package:app/src/core/theme/app_theme.dart';
+import 'package:app/src/core/shareable_components/common_app_bar.dart';
 import 'package:app/src/core/utils/app_strings.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/size_config.dart';
-import 'package:app/src/core/utils/styles.dart';
+import 'package:app/src/screens/auth_screens/widgets/forget_password_form.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
@@ -14,35 +11,18 @@ class ForgetPasswordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
-
     return Scaffold(
-        appBar: const CustomAppBar(style: 2, headline: AppStrings.forget),
         body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(Constance.globalPadding),
-            child: Column(
-              children: [
-                Helper().hSizeBox(SizeConfig.screenHeight! * 0.064),
-                Text(
-                  AppStrings.enterEmail,
-                  style: Styles().getText14pxTextStyle(
-                    color: AppTheme.getColor(
-                      ColorType.text,
-                      Constance.isLight,
-                    ),
-                  ),
-                ),
-                Helper().hSizeBox(SizeConfig.screenHeight! * 0.016),
-                const CommonTextField(
-                  labelText: AppStrings.emailField,
-                  hintText: AppStrings.emailField,
-                ),
-                Helper().hSizeBox(SizeConfig.screenHeight! * 0.064),
-                CommonPrimaryBtn(btnText: AppStrings.send.toUpperCase()),
-              ],
-            ),
-          ),
-        ));
+      child: Padding(
+        padding: EdgeInsets.all(Constance.globalPadding),
+        child: Column(
+          children: [
+            const CommonAppBar(style: 2, headline: AppStrings.forget),
+            Helper().hSizeBox(SizeConfig.screenHeight! * 0.064),
+            const ForgetPasswordForm(),
+          ],
+        ),
+      ),
+    ));
   }
 }

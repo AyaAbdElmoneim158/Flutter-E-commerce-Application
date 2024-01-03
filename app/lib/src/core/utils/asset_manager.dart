@@ -54,4 +54,6 @@ abstract class ImageAssets {
   static const String banner2Image = '$imagePath/banner2.png';
 
   static const String bagsImage = '$imagePath/bags.svg';
+  static const String splash1Image = '$imagePath/splash_1.png';
+  static const String splash2Image = '$imagePath/splash_2.png';
 }

@@ -6,14 +6,15 @@ import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CommonPrimaryBtn extends StatelessWidget {
-  const CommonPrimaryBtn(
-      {super.key,
-      required this.btnText,
-      this.isBig = true,
-      this.onTap,
-      this.hasIcon = false,
-      this.icon = Icons.edit,
-      this.width});
+  const CommonPrimaryBtn({
+    super.key,
+    required this.btnText,
+    this.isBig = true,
+    this.onTap,
+    this.hasIcon = false,
+    this.icon = Icons.edit,
+    this.width,
+  });
   final String btnText;
   final bool isBig;
   final void Function()? onTap;
