@@ -1,9 +1,9 @@
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/screens/main_screen/category/widgets/category_details_screen_widgets/builder_bottom_sheet_filter.dart';
-import 'package:app/src/screens/main_screen/category/widgets/category_details_screen_widgets/builder_bottom_sheet_selected_size.dart';
-import 'package:app/src/screens/main_screen/category/widgets/category_details_screen_widgets/builder_bottom_sheet_sort.dart';
+import 'package:app/src/features/category/views/widgets/category_details_screen_widgets/builder_bottom_sheet_filter.dart';
+import 'package:app/src/features/category/views/widgets/category_details_screen_widgets/builder_bottom_sheet_selected_size.dart';
+import 'package:app/src/features/category/views/widgets/category_details_screen_widgets/builder_bottom_sheet_sort.dart';
 import 'package:flutter/material.dart';
 
 class CommonFilter extends StatelessWidget {

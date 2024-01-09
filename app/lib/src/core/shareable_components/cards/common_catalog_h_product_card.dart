@@ -5,7 +5,7 @@ import 'package:app/src/core/shareable_components/form/common_product_rating.dar
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/model/product_model.dart';
+import 'package:app/src/features/home/model/product_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonCatalogHProductCard extends StatelessWidget {
@@ -13,7 +13,7 @@ class CommonCatalogHProductCard extends StatelessWidget {
     super.key,
     required this.product,
   });
-  final Product product;
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class CommonCatalogHProductCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          CardImageH(imagePath: product.imageCover),
+          CardImageH(imagePath: product.images[0]),
           _buildCardInfo(),
         ],
       ),
@@ -46,7 +46,7 @@ class CommonCatalogHProductCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                product.title,
+                product.name,
                 style: Styles().getText16pxTextStyle(
                   color: AppTheme.getColor(ColorType.text, Constance.isLight),
                 ),

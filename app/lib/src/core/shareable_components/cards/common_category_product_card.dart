@@ -3,7 +3,7 @@ import 'package:app/src/core/shareable_components/cards/card_image_h.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/model/category_model.dart';
+import 'package:app/src/features/category/model/category_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonCategoryProductCard extends StatelessWidget {
@@ -21,7 +21,7 @@ class CommonCategoryProductCard extends StatelessWidget {
           _buildCardInfo(),
           CardImageH(
             // isSvg: true,
-            imagePath: category.image,
+            imagePath: category.imageUrl,
             isRight: true,
           ),
         ],

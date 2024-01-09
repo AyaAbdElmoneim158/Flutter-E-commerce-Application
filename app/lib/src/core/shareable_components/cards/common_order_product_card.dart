@@ -5,12 +5,12 @@ import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/model/order_model.dart';
+import 'package:app/src/features/profile/model/order_item_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonOrderProductCard extends StatelessWidget {
   const CommonOrderProductCard({super.key, required this.orderCartItem});
-  final OrderCartItem orderCartItem;
+  final OrderItemModel orderCartItem;
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +19,14 @@ class CommonOrderProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          CardImageH(imagePath: orderCartItem.image),
+          CardImageH(imagePath: orderCartItem.itemImage),
           _buildCardInfo(orderCartItem),
         ],
       ),
     );
   }
 
-  Widget _buildCardInfo(OrderCartItem orderCartItem) {
+  Widget _buildCardInfo(OrderItemModel orderCartItem) {
     return Expanded(
       flex: 8,
       child: Padding(
@@ -36,16 +36,16 @@ class CommonOrderProductCard extends StatelessWidget {
           // mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              orderCartItem.product,
+              orderCartItem.itemName,
               style: Styles().getText16pxTextStyle(
                 color: AppTheme.getColor(ColorType.text, Constance.isLight),
               ),
             ),
             Row(
               children: [
-                buildKeyValueText(key: "Color", value: orderCartItem.color),
+                buildKeyValueText(key: "Color", value: orderCartItem.itemColor),
                 Helper().wSizeBox(8),
-                buildKeyValueText(key: "Size", value: orderCartItem.size),
+                buildKeyValueText(key: "Size", value: orderCartItem.itemSize),
               ],
             ),
             Row(

@@ -5,7 +5,7 @@ import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/model/order_model.dart';
+import 'package:app/src/features/profile/model/order_item_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonBagProductCard extends StatelessWidget {
@@ -13,7 +13,7 @@ class CommonBagProductCard extends StatelessWidget {
     super.key,
     required this.orderItem,
   });
-  final OrderCartItem orderItem;
+  final OrderItemModel orderItem;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class CommonBagProductCard extends StatelessWidget {
           Flexible(
             flex: 4,
             child: Image.asset(
-              orderItem.image,
+              orderItem.itemImage,
               fit: BoxFit.cover,
             ),
           ),
@@ -50,7 +50,7 @@ class CommonBagProductCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    orderItem.product,
+                    orderItem.itemName,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Styles().getText16pxTextStyle(
@@ -69,9 +69,9 @@ class CommonBagProductCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  buildKeyValueText(key: "Color: ", value: orderItem.color),
+                  buildKeyValueText(key: "Color: ", value: orderItem.itemColor),
                   Helper().wSizeBox(8),
-                  buildKeyValueText(key: "Size: ", value: orderItem.size),
+                  buildKeyValueText(key: "Size: ", value: orderItem.itemColor),
                 ],
               ),
               Row(

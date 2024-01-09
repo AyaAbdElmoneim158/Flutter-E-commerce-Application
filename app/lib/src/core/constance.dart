@@ -1,7 +1,7 @@
 import 'package:app/src/core/utils/size_config.dart';
 
 abstract class Constance {
-  static bool isLight = false;
+  static bool isLight = true;
   static var viewList = ViewList.horizontal;
   static const String appName = "E-commerce App";
   static const double globalRadius = 12;

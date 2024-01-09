@@ -7,12 +7,12 @@ import 'package:app/src/core/utils/app_colors.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/model/product_model.dart';
+import 'package:app/src/features/home/model/product_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonFavoriteHProductCard extends StatelessWidget {
   const CommonFavoriteHProductCard({super.key, required this.product});
-  final Product product;
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,9 @@ class CommonFavoriteHProductCard extends StatelessWidget {
       child: Row(
         children: [
           CardImageH(
-            imagePath: product.imageCover,
+            imagePath: product.images[0],
             tagBg: AppColors.lightPrimaryColor,
-            tagText: '${product.priceAfterDiscount}%',
+            tagText: '${product.discountPercentage}%',
             isTagged: true,
           ),
           _buildCardInfo(),
@@ -52,7 +52,7 @@ class CommonFavoriteHProductCard extends StatelessWidget {
               ),
             ),
             Text(
-              product.title,
+              product.name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: Styles().getText16pxTextStyle(

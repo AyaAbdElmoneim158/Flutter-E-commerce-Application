@@ -2,6 +2,7 @@ import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CommonTag extends StatelessWidget {
   const CommonTag({
@@ -20,10 +21,7 @@ class CommonTag extends StatelessWidget {
       onTap: onTap,
       child: Container(
         alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 57,
-          // vertical: 1,
-        ),
+        padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 15.w),
         decoration: BoxDecoration(
           color: getBgColor(styleNumber),
           borderRadius: (styleNumber == 4)

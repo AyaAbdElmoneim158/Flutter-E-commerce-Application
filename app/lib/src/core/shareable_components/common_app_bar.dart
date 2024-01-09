@@ -2,6 +2,7 @@ import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CommonAppBar extends StatelessWidget {
   const CommonAppBar({
@@ -21,7 +22,6 @@ class CommonAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: AppTheme.getColor(ColorType.background, Constance.isLight),
         boxShadow: (style == 3) ? [Styles().getAppBarBoxShadow()] : [],
@@ -40,7 +40,7 @@ class CommonAppBar extends StatelessWidget {
                   },
                   icon: Icon(
                     Icons.arrow_back_ios,
-                    size: 24,
+                    size: 24.w,
                     color: AppTheme.getColor(ColorType.text, Constance.isLight),
                   ),
                 ),

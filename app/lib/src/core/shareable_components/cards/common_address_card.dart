@@ -3,7 +3,7 @@ import 'package:app/src/core/shareable_components/cards/base_card.dart';
 import 'package:app/src/core/shareable_components/form/common_checkbox.dart';
 import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/model/address_model.dart';
+import 'package:app/src/features/profile/model/shipping_address_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonAddressCard extends StatelessWidget {
@@ -14,7 +14,7 @@ class CommonAddressCard extends StatelessWidget {
     this.hasCheckBox = true,
   });
   final dynamic checkBoxCallback;
-  final Address address;
+  final ShippingAddressModel address;
   final bool hasCheckBox;
 
   @override
@@ -30,7 +30,7 @@ class CommonAddressCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  address.city,
+                  address.fullName,
                   style: Styles().getText14pxTextStyle(
                     color: AppTheme.getColor(
                       ColorType.text,
@@ -53,7 +53,7 @@ class CommonAddressCard extends StatelessWidget {
               ],
             ),
             Text(
-              "${address.alias}\n ${address.city} ,${address.postalCode} , ${address.details}",
+              "${address.address}\n ${address.city}, ${address.state} ${address.zipCode} , ${address.country}",
               style: Styles().getDescriptionTextStyle(
                 color: AppTheme.getColor(ColorType.text, Constance.isLight),
               ),
@@ -61,7 +61,9 @@ class CommonAddressCard extends StatelessWidget {
             if (hasCheckBox)
               CommonCheckbox(
                 callback: (val) {
-                  if (checkBoxCallback != null) checkBoxCallback(val);
+                  // if (checkBoxCallback != null) checkBoxCallback(val);
+
+                  //! address.isDefault = (address.isDefault) ? false : true;
                 },
                 title: 'Use as the shipping address',
               ),

@@ -5,12 +5,12 @@ import 'package:app/src/core/theme/app_theme.dart';
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/model/product_model.dart';
+import 'package:app/src/features/home/model/product_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonMainProductCard extends StatelessWidget {
   const CommonMainProductCard({super.key, required this.product});
-  final Product product;
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +22,8 @@ class CommonMainProductCard extends StatelessWidget {
           children: [
             Column(
               children: [
-                Image.asset(
-                  product.imageCover,
+                Image.network(
+                  product.images[0],
                   fit: BoxFit.cover,
                   width: double.infinity,
                   // height: SizeConfig.screenHeight! * 0.03,
@@ -48,7 +48,7 @@ class CommonMainProductCard extends StatelessWidget {
     );
   }
 
-  Expanded _buildCardInfo({required Product product}) {
+  Expanded _buildCardInfo({required ProductModel product}) {
     return Expanded(
       flex: 4,
       child: Padding(
@@ -56,7 +56,7 @@ class CommonMainProductCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CommonProductRating(rating: product.ratingsAverage),
+            const CommonProductRating(rating: 5), // rating: 5
             Text(
               product.brand,
               style: Styles().getText11pxTextStyle(
@@ -64,7 +64,7 @@ class CommonMainProductCard extends StatelessWidget {
               ),
             ),
             Text(
-              product.title,
+              product.name,
               style: Styles().getText16pxTextStyle(
                 color: AppTheme.getColor(ColorType.text, Constance.isLight),
               ),
@@ -82,8 +82,8 @@ class CommonMainProductCard extends StatelessWidget {
                     ),
               ),
               Helper().wSizeBox(8),
-              if (product.priceAfterDiscount != 0.0)
-                Text("${product.priceAfterDiscount}\$",
+              if (product.price != 0.0) //! here
+                Text("${product.discountPercentage}\$", //! here
                     style: Styles().getText14pxTextStyle(
                       color: AppTheme.getColor(
                         ColorType.primary,

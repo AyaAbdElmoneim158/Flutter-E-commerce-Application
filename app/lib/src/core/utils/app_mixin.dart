@@ -1,6 +1,7 @@
 import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 mixin SnackBars {
   showSnakeBar(BuildContext context, String text) {
@@ -17,7 +18,7 @@ mixin SizedBoxes {
 mixin TextStyles {
   TextStyle getHeadlineTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-        fontSize: 34,
+        fontSize: 34.sp,
         fontWeight: FontWeight.bold,
         color: color,
         overflow: TextOverflow.ellipsis,
@@ -25,7 +26,7 @@ mixin TextStyles {
 
   TextStyle getHeadline2TextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-        fontSize: 24,
+        fontSize: 24.sp,
         fontWeight: FontWeight.w600,
         height: 1.2,
         color: color,
@@ -34,7 +35,7 @@ mixin TextStyles {
 
   TextStyle getHeadline3TextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-        fontSize: 18,
+        fontSize: 18.sp,
         fontWeight: FontWeight.w600,
         height: 2.2,
         color: color,
@@ -43,7 +44,7 @@ mixin TextStyles {
 
   TextStyle getText11pxTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-        fontSize: 11,
+        fontSize: 11.sp,
         fontWeight: FontWeight.w400,
         color: color,
         overflow: TextOverflow.ellipsis,
@@ -51,7 +52,7 @@ mixin TextStyles {
 
   TextStyle getText14pxTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-        fontSize: 14,
+        fontSize: 14.sp,
         fontWeight: FontWeight.w500,
         color: color,
         overflow: TextOverflow.ellipsis,
@@ -59,7 +60,7 @@ mixin TextStyles {
 
   TextStyle getText16pxTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-        fontSize: 16,
+        fontSize: 16.sp,
         fontWeight: FontWeight.w600,
         color: color,
         overflow: TextOverflow.ellipsis,
@@ -67,14 +68,14 @@ mixin TextStyles {
 
   TextStyle getText16pxRegularTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-          fontSize: 16,
+          fontSize: 16.sp,
           fontWeight: FontWeight.w400,
           color: color,
           overflow: TextOverflow.ellipsis);
 
   TextStyle getDescriptionTextStyle({Color? color = AppColors.lightText}) =>
       TextStyle(
-          fontSize: 14,
+          fontSize: 14.sp,
           fontWeight: FontWeight.w400,
           color: color,
           // overflow: TextOverflow.ellipsis,
@@ -83,7 +84,7 @@ mixin TextStyles {
   TextStyle getPaymentNumberCardTextStyle(
           {Color? color = AppColors.lightText}) =>
       TextStyle(
-        fontSize: 24,
+        fontSize: 24.sp,
         color: color,
         overflow: TextOverflow.ellipsis,
         letterSpacing: -0.41,
@@ -91,7 +92,7 @@ mixin TextStyles {
 
   TextStyle getHeadlineHomeTextStyle({double? fontSize = 48, Color? color}) =>
       TextStyle(
-        fontSize: fontSize,
+        fontSize: fontSize!.sp,
         fontWeight: FontWeight.bold,
         color: color,
         overflow: TextOverflow.ellipsis,

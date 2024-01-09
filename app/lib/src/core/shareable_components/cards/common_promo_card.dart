@@ -7,7 +7,7 @@ import 'package:app/src/core/constance.dart';
 import 'package:app/src/core/utils/helper.dart';
 import 'package:app/src/core/utils/size_config.dart';
 import 'package:app/src/core/utils/styles.dart';
-import 'package:app/src/model/coupon_model.dart';
+import 'package:app/src/features/cart/model/coupon_model.dart';
 import 'package:flutter/material.dart';
 
 class CommonPromoCard extends StatelessWidget {
